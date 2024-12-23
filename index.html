@@ -9,21 +9,23 @@
       rel="stylesheet"
       href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-AIdWsWO+tNWTlSl3luSLnBCSnpR9xyOJ+frFNd/2TBwPKYtJAkaeyj6qlLRM4gx4" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <link rel="icon" type="image/png" href="https://i.postimg.cc/tgDsWRhF/profile.jpg">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-n/X56zNwKf2/bQzgLlg5p2W1o10gLnfdzR1lYrghWCrpxgPq3Rqq4Y22V5T0w9thIX6TjB0GFEpzZ30bhTlqA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <title>Adongo Jakes - Frontend Developer</title>
   </head>
   <body>
     
     <div class="sticky">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-light">
           <div class="container">
             <a class="navbar-brand" href="#"><h1 style="font-weight: bolder; font-family: monospace;">Adongo</h1></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,151 +44,169 @@
           </div>
         </nav>
     </div>
-  <br>
-  <br>
-  <br>
-  <br>
  
     <section class="social-icons-section" id="home">
         <div class="social-icons">
-          <a href="https://github.com/Adong-o?tab=repositories" class="social-icon"><i class="fa fa-github"></i></a>
-          <a href="https://twitter.com/AdongoJakes" class="social-icon"><i class="fa fa-twitter"></i></a>
-          <a href="https://www.instagram.com/lord.adongo/" class="social-icon"><i class="fa fa-instagram"></i></a>
+          <a href="https://github.com/Adong-o?tab=repositories" class="social-icon"><i class="fab fa-github"></i></a>
+          <a href="https://twitter.com/AdongoJakes" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://www.instagram.com/lord.adongo/" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <button class="theme-toggle social-icon" aria-label="Toggle theme">
+              <i class="fas fa-sun"></i>
+          </button>
         </div>
         <div class="centered-content">
           <h1 style="font-size: 50px; font-weight: bold;">Hi, I'm Adongo</h1>
-          <h4 style="font-style: italic;">Front-End Developer</h4>
-          <p>Experienced in web design and web application development, focused on creating quality products.</p>
+          <h4 class="animated-text" style="font-style: italic;"></h4>
+          <p>Crafting intuitive web experiences and building innovative solutions that make a real impact.</p>
           <br>
-          <button class="button-contact"><a href="#contact">Contact</a></button>
+         
         </div>
         <div class="profile-picture">
           <img src="https://i.postimg.cc/T3xWbVFL/20231225-172412.jpg" alt="Profile Picture">
           
         </div>
+
+        <div class="profile-cta">
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Projects</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">2+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Client Satisfaction</span>
+                </div>
+            </div>
+            <button class="download-cv" onclick="openModal()">
+                <i class="fas fa-download"></i> Download CV
+            </button>
+        </div>
       </section>
 
-      <div class="container mt-4" id="about">
-        <h2 class="text-center" style="font-size: 50px; font-weight: bold; font-family: monospace;">ABOUT ME</h2>
-      
-        <div class="row">
+      <section class="about-section" id="about">
+        <div class="container mt-5">
+            <h2 class="section-title">ABOUT ME</h2>
+            <div class="row align-items-center">
           <div class="col-md-4">
-            <!-- Image -->
-            <img src="https://i.postimg.cc/4yP2T9tm/aboupic.jpg" alt="Jakes" class="img-fluid">
-            
-            
+                    <img src="https://i.postimg.cc/4yP2T9tm/aboupic.jpg" alt="Jakes" class="img-fluid about-image">
           </div>
           <div class="col-md-8">
-            <br>
-            <br>
-            <!-- Description -->
-           <p>Curiosity sparked my interest in crafting digital experiences, so I set out on a journey of exploration in web development. I delved into various online resources, soaking up knowledge through courses, tutorials, and practical tasks. Along the way, I immersed myself in <strong>HTML, CSS, Bootstrap, Figma, and JavaScript, </strong>unraveling their intricacies and discovering their creative potential.</p>
-           <p>I focused mainly on front-end development, mastering the craft of creating websites that adapt beautifully to various devices. Along the way, I also had the chance to take on a few freelance opportunities, further enhancing my skills and experience. Through dedication and hard work, I gained valuable experience and tackled daily tasks with enthusiasm.</p>
-           <p>Driven by an insatiable thirst for knowledge, I've embarked on a new endeavor to master React.js. Learning through project-based approaches, I am actively honing my skills, leveraging real-world scenarios to deepen my understanding of this powerful framework.</p>
-           <p>As I continue to evolve as a web developer, I am fueled by the excitement of exploring new technologies and pushing the boundaries of what's possible in the digital landscape.</p>
-            
+                    <div class="about-content">
+                        <p>Hey there! I'm Adongo, a self-taught developer who turned a fascination with technology into a passion for creating meaningful web experiences. What started as tinkering with code has evolved into a journey of building products that make a real difference.</p>
+                        
+                        <p>My toolkit includes <strong>HTML, CSS, JavaScript, React, and Figma</strong> - but beyond the technical stack, I bring a problem-solver's mindset to every project. I believe great code should serve a purpose, whether it's making a business more efficient or making someone's day a little easier.</p>
+                        
+                        <p>These days, I spend my time crafting digital solutions that address real challenges. From helping small businesses establish their online presence to developing tools that streamline everyday tasks, I'm all about creating practical, user-friendly applications that deliver value.</p>
+                        
+                        <p>I'm always excited to take on new challenges and collaborate on interesting projects. If you have an idea that needs bringing to life or a problem that needs solving, I'd love to hear about it. Let's build something impactful together!</p>
+                    </div>
           </div>
         </div>
       </div>
-      <br>
-      <br>
+    </section>
       
       <section class="info-section" id="projects">
         <div class="container">
-          <h2 class="section-title" style="font-weight: bolder; font-size: 40px;">PROJECTS</h2>
-          <br>
-          <br>
-          <div class="row">
-            <div class="col-md-6" id="down">
-              <h3 style="font-weight: bolder; font-size: 30px;">imageoasis.art</h3>
-              
-              <p>Image Oasis offers high-quality wallpapers for free with no sign-ups required. Built with HTML, CSS, and JavaScript, it fetches stunning images from the Pexels API, providing a seamless and simple browsing experience.</p>
-              <br>
-              <button type="button" class="live-btn"><a href="https://www.imageoasis.art" target="_blank">Live</a></button>
-            </div>
-            
-            <div class="col-md-6 text-center">
-              <img src="https://i.postimg.cc/66YVGVMC/png-4.jpg" class="img-fluid" alt="Image">
-              <br>
-            </div>
-          </div>
-          <br>
-
-          <div class="row">
-            <div class="col-md-6" id="down">
-              <h3 style="font-weight: bolder; font-size: 30px;">Restaurant Landing Page</h3>
-              
-              <p>I created a restaurant landing page using HTML, CSS, and JavaScript, based on a rough design. The site features a visually appealing color scheme, high-quality images of the restaurant, and an intuitive navigation menu for easy browsing. A reservation form and prominent call-to-action buttons encourage visitors to book or place orders seamlessly.</p>
-              <button type="button" class="live-btn"><a href="https://adong-o.github.io/Restaurant-Website/" target="_blank">Live</a></button>
-            </div>
-            <div class="col-md-6 text-center">
-              <img src="https://i.postimg.cc/59sX6txJ/restaurant.png" class="img-fluid" alt="Image">
-              <br>
+            <h2 class="section-title">PROJECTS</h2>
+            <div class="projects-container">
+                <button class="scroll-btn prev-btn" aria-label="Previous project">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <div class="projects-wrapper">
+                    <div class="projects-grid">
+                        <div class="project-card">
+                            <img src="https://i.postimg.cc/66YVGVMC/png-4.jpg" alt="Image Oasis">
+                            <div class="p-4">
+                                <h3>imageoasis.art</h3>
+                                <p>A sophisticated image platform offering high-quality wallpapers without any sign-up requirements. Built with HTML, CSS, and JavaScript, this application seamlessly integrates with the Pexels API to deliver stunning visuals. Features include instant search, dynamic loading, and direct high-resolution downloads.</p>
+                                <a href="https://www.imageoasis.art" target="_blank" class="butn">View Project</a>
             </div>
           </div>
-         <br>
-          <div class="row">
-            <div class="col-md-6" id="down">
-              <h3 style="font-weight: bolder; font-size: 30px;">Youtube Receipt</h3>
-              
+                        <div class="project-card">
+                            <img src="https://i.postimg.cc/59sX6txJ/restaurant.png" alt="Restaurant Landing Page">
+                            <div class="p-4">
+                                <h3>Restaurant Landing Page</h3>
+                                <p>A modern restaurant website featuring an elegant design and seamless user experience. Built with HTML, CSS, and JavaScript, it includes an intuitive navigation system, online reservation functionality, and a dynamic menu showcase. The responsive design ensures perfect viewing across all devices.</p>
+                                <a href="https://adong-o.github.io/Restaurant-Website/" target="_blank" class="butn">View Project</a>
+            </div>
+          </div>
+                        <div class="project-card">
+                            <img src="https://i.postimg.cc/BQyqY6SX/png-5.jpg" alt="Youtube Receipt">
+                            <div class="p-4">
+                                <h3>Youtube Receipt</h3>
               <p>Inspired by <a href="https://gitreceipt.vercel.app/">GitReceipt (by Ankit on Twitter)</a> and my deep love for YouTube, I developed this tool over a weekend to enhance the YouTube experience. Using the YouTube Data API, I created a practical and user-friendly solution that’s completely free to use, designed to simplify and optimize interactions with YouTube data.</p>
-              <button type="button" class="live-btn"><a href="https://ytreceipt.vercel.app/" target="_blank">Live</a></button>
+                                <a href="https://ytreceipt.vercel.app/" target="_blank" class="butn">View Project</a>
+                            </div>
             </div>
-            <div class="col-md-6 text-center">
-              <img src="https://i.postimg.cc/BQyqY6SX/png-5.jpg" class="img-fluid" alt="Image">
-            </div>
-          </div>
-          <br>
-          <div class="row">
-            <div class="col-md-6" id="down">
-              <h3 style="font-weight: bolder; font-size: 30px;">Online Clothing Shop</h3>
-              
-              <p>An online clothing website designed to captivate users with its sleek interface and seamless functionality. Leveraging Bootstrap and CSS, I've meticulously crafted a visually stunning experience that exudes style and professionalism.</p>
-              <button type="button" class="live-btn"><a href="https://adong-o.github.io/Shop-Adongo/" target="_blank">Live</a></button>
-            </div>
-            <div class="col-md-6 text-center">
-              <img src="https://i.postimg.cc/Sxbt9gKW/online-shoping-store.png" class="img-fluid" alt="Image">
+                        <div class="project-card">
+                            <img src="https://i.postimg.cc/Sxbt9gKW/online-shoping-store.png" alt="Online Clothing Shop">
+                            <div class="p-4">
+                                <h3>Online Clothing Shop</h3>
+                                <p>An online clothing website designed to captivate users with its sleek interface and seamless functionality. Leveraging Bootstrap and CSS, I've meticulously crafted a visually stunning experience that exudes style and professionalism.</p>
+                                <a href="https://adong-o.github.io/Shop-Adongo/" target="_blank" class="butn">View Project</a>
             </div>
           </div>
-         <br>
-          <div class="row">
-            <div class="col-md-6" id="down">
-              <h3 style="font-weight: bolder; font-size: 30px;">Slot Machine</h3>
-             
-              <p>I created a Slot machine running on terminal. I made it to implement some javascript code i learnt, got help from Stackoverflow, Google, YouTube and ChatGpt abit. It allows one to select the amount of cash to deposit and bet certain amount.</p>
-              <button type="button" class="code-btn"><a href="https://github.com/Adong-o/Slot-Machine" target="_blank">Code</a></button>
+                        <div class="project-card">
+                            <img src="https://i.postimg.cc/Vk1Lcc4V/machine.png" alt="Slot Machine">
+                            <div class="p-4">
+                                <h3>Slot Machine</h3>
+                                <p>I created a Slot machine running on terminal. I made it to implement some javascript code i learnt, got help from Stackoverflow, Google, YouTube and ChatGpt abit. It allows one to select the amount of cash to deposit and bet certain amount.</p>
+                                <a href="https://github.com/Adong-o/Slot-Machine" target="_blank" class="butn">View Code</a>
+                            </div>
             </div>
-            <div class="col-md-6 text-center">
-              <img src="https://i.postimg.cc/Vk1Lcc4V/machine.png" class="img-fluid" alt="Image">
             </div>
+          </div>
+
+                <button class="scroll-btn next-btn" aria-label="Next project">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
           </div>
         </div>
-        <br>
       </section>
       
       <div class="center1">
         <button class="button11"><a href="https://github.com/Adong-o?tab=repositories" target="_blank">More</a></button>
     </div>
 
-    <br>
-    
-
-    <section class="skills-section">
+    <section class="skills-section" id="skills">
       <h2>Skills</h2>
       <ul class="skills-list">
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>Figma</li>
-          <li>JavaScript</li>
-          <li>React</li>
+          <!-- Frontend Core -->
+          <li>HTML5 & CSS3</li>
+          <li>JavaScript (ES6+)</li>
+          <li>React.js</li>
           <li>Bootstrap</li>
+          <li>Responsive Design</li>
+          
+          <!-- UI/UX -->
+          <li>Figma</li>
+          <li>UI/UX Design</li>
+          <li>Wireframing</li>
+          
+          <!-- Development Tools -->
+          <li>Git & GitHub</li>
+          <li>VS Code</li>
+          <li>Chrome DevTools</li>
+          
+          <!-- Additional Frontend -->
+          <li>REST APIs</li>
+          <li>SASS/SCSS</li>
+          <li>Tailwind CSS</li>
+          
+          <!-- Soft Skills -->
+          <li>Problem Solving</li>
+          <li>Team Collaboration</li>
+          <li>Time Management</li>
       </ul>
   </section>
 
-      <br>
-      
-
-      <div class="container12" id="contact">
+      <section class="contact-section" id="contact">
+        <div class="container12">
         <h1 style="text-align: center; font-size: 2rem; margin-bottom: 10px; font-weight: bolder;">Contact Me</h1>
         <h2 style="text-align: center; font-size: 1.2rem; margin-bottom: 20px; color: #666;">Feel free to reach out!</h2>
         <form action="https://formspree.io/f/mbjnbawp" method="POST">
@@ -202,16 +222,15 @@
           <button type="submit" class="butn">Send</button>
         </form>
       </div>
+      </section>
 
       <footer>
         <div class="footer-container">
-            <div class="footer-left">
-                <h3>Contact</h3>
-                <p>Name: Jakes Adongo</p>
-                <p>Email: adongojakes@gmail.com</p>
-            </div>
-            <div class="footer-right">
-                <p>&copy; 2024 All rights reserved.</p>
+            <h3>Let's Connect</h3>
+            <div class="footer-content">
+                <p>Jakes Adongo</p>
+                <p>adongojakes@gmail.com</p>
+                <p class="copyright">&copy; 2024 All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -223,6 +242,17 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+    <div id="resumeModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <h3>Resume Currently Unavailable</h3>
+            <p>I'm currently updating my resume to better reflect my recent projects and experiences. In the meantime, feel free to reach out to me directly on X (formerly Twitter) for any opportunities or collaborations!</p>
+            <a href="https://twitter.com/AdongoJakes" class="twitter-link" target="_blank">
+                <i class="fa-brands fa-x-twitter"></i> Reach Out on X
+            </a>
+        </div>
+    </div>
   </body>
   </html>
   
