@@ -66,25 +66,39 @@ body {
 
 /* Hero Section */
   .social-icons-section {
-  padding: 6rem 0 2rem;
+  padding: 8rem 0 4rem;
   background-color: var(--light-bg);
   position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .centered-content {
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
   text-align: center;
+  padding: 0 2rem;
 }
 
 .centered-content h1 {
   color: var(--primary-color);
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 4rem !important;
+  line-height: 1.2;
+}
+
+.centered-content p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
 }
 
 .profile-picture img {
-  width: 300px;
-  height: 300px;
+  width: 350px;
+  height: 350px;
   border-radius: 50%;
   object-fit: cover;
   border: 5px solid var(--secondary-color);
@@ -280,7 +294,7 @@ main {
 
 /* Section spacing */
 section {
-    padding: 4rem 0;
+    padding: 6rem 0;
 }
 
 /* About section styles */
@@ -375,9 +389,9 @@ section {
     font-style: italic;
     min-height: 30px;
     transition: opacity 0.5s ease-in-out;
-    margin: 1rem 0;
+    margin: 1.5rem 0;
     color: #00ff9d;
-    font-size: 1.5rem;
+    font-size: 2rem !important;
     font-weight: 600;
     text-shadow: 0 0 10px rgba(0, 255, 157, 0.3);
 }
@@ -732,6 +746,8 @@ a:hover {
     justify-content: center;
     gap: 3rem;
     margin-bottom: 3rem;
+    max-width: 1000px;
+    margin: 0 auto 3rem;
 }
 
 .stat-item {
@@ -741,13 +757,13 @@ a:hover {
 }
 
 .stat-number {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     font-weight: 700;
     color: var(--primary-color);
 }
 
 .stat-label {
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: var(--text-color);
     margin-top: 0.5rem;
 }
@@ -897,5 +913,67 @@ a:hover {
     .modal-content {
         margin: 30% auto;
         padding: 1.5rem;
+    }
+}
+
+/* Add specific styles for extra large screens */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+
+    .centered-content {
+        max-width: 1000px;
+    }
+
+    .profile-picture img {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+/* Add styles for large screens */
+@media (min-width: 992px) and (max-width: 1399px) {
+    .centered-content h1 {
+        font-size: 3.5rem !important;
+    }
+
+    .animated-text {
+        font-size: 1.8rem !important;
+    }
+}
+
+/* Update stats section for larger screens */
+.stats {
+    max-width: 1000px;
+    margin: 0 auto 3rem;
+}
+
+.stat-number {
+    font-size: 2.2rem;
+}
+
+.stat-label {
+    font-size: 1rem;
+}
+
+/* Ensure proper spacing between sections */
+section {
+    padding: 6rem 0;
+}
+
+/* Update navbar for larger screens */
+@media (min-width: 992px) {
+    .navbar {
+        padding: 1.5rem 0;
+    }
+
+    .navbar-brand h1 {
+        font-size: 2rem;
+    }
+
+    .nav-link {
+        font-size: 1.1rem;
+        padding: 0.5rem 1.5rem !important;
     }
 }
