@@ -1,7 +1,8 @@
 /* Global Styles */
 :root {
   --primary-color: #1a1a1a;
-  --secondary-color: #00ff9d;
+  --secondary-color: #FF6B6B;
+  --accent-color: #4A90E2;
   --text-color: #4a4a4a;
   --light-bg: #f0f0f0;
   --card-bg: white;
@@ -12,7 +13,8 @@
 
 [data-theme="dark"] {
   --primary-color: #ffffff;
-  --secondary-color: #00ff9d;
+  --secondary-color: #FF6B6B;
+  --accent-color: #4A90E2;
   --text-color: #e0e0e0;
   --light-bg: #1a1a1a;
   --card-bg: #2d2d2d;
@@ -104,14 +106,14 @@ body {
 }
 
 .profile-picture img {
-  width: 400px;
-  height: 400px;
+  width: 450px;
+  height: 450px;
   border-radius: 50%;
   object-fit: cover;
-  border: 5px solid var(--secondary-color);
+  border: 5px solid var(--accent-color);
   display: block;
   margin: 0 auto;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 15px rgba(74, 144, 226, 0.3);
 }
 
 .social-icons {
@@ -401,10 +403,10 @@ section {
     min-height: 30px;
     transition: opacity 0.5s ease-in-out;
     margin: 1.5rem 0;
-    color: #00ff9d;
+    color: var(--accent-color);
     font-size: 2rem !important;
     font-weight: 600;
-    text-shadow: 0 0 10px rgba(0, 255, 157, 0.3);
+    text-shadow: 0 0 10px rgba(74, 144, 226, 0.2);
 }
 
 /* Add these new styles for the projects section */
@@ -547,8 +549,8 @@ a:hover {
     }
 
     .profile-picture img {
-        width: 250px;
-        height: 250px;
+        width: 300px;
+        height: 300px;
     }
 
     .social-icons {
@@ -624,8 +626,8 @@ a:hover {
     }
 
     .profile-picture img {
-    width: 200px;
-        height: 200px;
+        width: 250px;
+        height: 250px;
     }
 
     /* About section */
@@ -702,7 +704,8 @@ a:hover {
 :root {
     /* Light theme (default) */
     --primary-color: #1a1a1a;
-    --secondary-color: #00ff9d;
+    --secondary-color: #FF6B6B;
+    --accent-color: #4A90E2;
     --text-color: #4a4a4a;
     --light-bg: #f0f0f0;
     --card-bg: white;
@@ -713,7 +716,8 @@ a:hover {
 
 [data-theme="dark"] {
     --primary-color: #ffffff;
-    --secondary-color: #00ff9d;
+    --secondary-color: #FF6B6B;
+    --accent-color: #4A90E2;
     --text-color: #e0e0e0;
     --light-bg: #1a1a1a;
     --card-bg: #2d2d2d;
@@ -986,5 +990,38 @@ section {
     .nav-link {
         font-size: 1.1rem;
         padding: 0.5rem 1.5rem !important;
+    }
+}
+
+/* Add these quote styles */
+.quote-container {
+    margin-top: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.quote {
+    font-style: italic;
+    color: #666666;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.quote-author {
+    color: var(--accent-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .quote {
+        font-size: 0.9rem;
+    }
+    .quote-author {
+        font-size: 0.8rem;
     }
 }
