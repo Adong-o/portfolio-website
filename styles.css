@@ -322,11 +322,38 @@ section {
 }
 
 .about-content {
-    padding: 2rem 0;
+    padding: 20px;
 }
 
 .about-content p {
     margin-bottom: 1.5rem;
+}
+
+.key-points {
+    margin: 20px 0;
+}
+
+.point {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    gap: 15px;
+}
+
+.point i {
+    font-size: 1.2rem;
+    color: #007bff;
+    margin-top: 4px;
+}
+
+.point p {
+    margin: 0;
+}
+
+.collaboration-note {
+    margin-top: 20px;
+    font-style: italic;
+    color: #666;
 }
 
 /* Update existing styles */

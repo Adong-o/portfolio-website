@@ -1,9 +1,6 @@
 const titles = [
-    "Problem Solver",
-    "Front-End Developer",
-    "Web Developer",
-    "Entrepreneur",
-    "Indie Maker"
+    "Human Being","Web Developer","Front-End Developer","Problem Solver","Entrepreneur","Indie Maker"
+    
 ];
 
 let currentIndex = 0;
