@@ -27,7 +27,7 @@
     <div class="sticky">
         <nav class="navbar navbar-expand-lg navbar-light">
           <div class="container">
-            <a class="navbar-brand" href="#"><h1 style="font-weight: bolder; font-family: monospace;">Adongo</h1></a>
+            <a class="navbar-brand" href="#"><h1 style="font-weight: bolder; font-family: monospace;">Adongo <span class="logo-dot">.</span></h1></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -230,30 +230,38 @@
 
       <section class="contact-section" id="contact">
         <div class="container12">
-        <h1 style="text-align: center; font-size: 2rem; margin-bottom: 10px; font-weight: bolder;">Contact Me</h1>
-        <h2 style="text-align: center; font-size: 1.2rem; margin-bottom: 20px; color: #666;">Feel free to reach out!</h2>
-        <form action="https://formspree.io/f/mbjnbawp" method="POST">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required>
-    
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
-    
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" rows="6" required></textarea>
-    
-          <button type="submit" class="butn">Send</button>
-        </form>
-      </div>
+            <h1>Contact Me</h1>
+            <form action="https://formspree.io/f/mbjnbawp" method="POST">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" rows="3" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="butn">Send</button>
+            </form>
+        </div>
       </section>
 
       <footer>
         <div class="footer-container">
-            <h3>Let's Connect</h3>
             <div class="footer-content">
-                <p>Jakes Adongo</p>
-                <p>adongojakes@gmail.com</p>
-                <p class="copyright">&copy; 2024 All rights reserved.</p>
+                <div class="footer-info">
+                    <h3>Jakes Adongo</h3>
+                    <p>Frontend Developer</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/Adong-o?tab=repositories" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://twitter.com/AdongoJakes" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/lord.adongo/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="mailto:adongojakes@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+                <div class="footer-bottom">
+                    <p class="copyright">&copy; 2024 | Crafted with <i class="fas fa-heart"></i> by Adongo</p>
+                </div>
             </div>
         </div>
     </footer>
