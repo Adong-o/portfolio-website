@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
 /* Global Styles */
 :root {
   --primary-color: #1a1a1a;
@@ -12,15 +16,15 @@
 }
 
 [data-theme="dark"] {
-  --primary-color: #ffffff;
-  --secondary-color: #FF6B6B;
+  --primary-color: #00ffff;
+  --secondary-color: #ff00ff;
   --accent-color: #4A90E2;
   --text-color: #e0e0e0;
-  --light-bg: #1a1a1a;
-  --card-bg: #2d2d2d;
-  --navbar-bg: rgba(26, 26, 26, 0.95);
-  --shadow-color: rgba(0, 0, 0, 0.3);
-  --border-color: #404040;
+  --light-bg: #0a0a0a;
+  --card-bg: rgba(20, 20, 20, 0.8);
+  --navbar-bg: rgba(10, 10, 10, 0.95);
+  --shadow-color: rgba(0, 255, 255, 0.2);
+  --border-color: rgba(0, 255, 255, 0.1);
 }
 
 * {
@@ -847,6 +851,8 @@ a:hover {
     --navbar-bg: rgba(26, 26, 26, 0.95);
     --shadow-color: rgba(0, 0, 0, 0.3);
     --border-color: #404040;
+    --font-primary: 'Orbitron', sans-serif;
+    --font-secondary: 'Rajdhani', sans-serif;
 }
 
 /* Theme toggle button styles */
@@ -1147,4 +1153,684 @@ section {
     .quote-author {
         font-size: 0.8rem;
     }
+}
+
+/* Project type selector styles */
+.project-type-selector {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.type-btn {
+    padding: 0.8rem 2rem;
+    border: 2px solid var(--primary-color);
+    background: var(--card-bg);
+    color: var(--primary-color);
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.type-btn.active {
+    background: var(--primary-color);
+    color: var(--card-bg);
+}
+
+.type-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Hide inactive project container */
+.projects-container {
+    display: none;
+}
+
+.projects-container.active {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .project-type-selector {
+        gap: 0.5rem;
+    }
+
+    .type-btn {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Update project grid styles */
+.projects-grid {
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.projects-grid-single {
+    width: 100%;
+}
+
+.projects-grid-single .project-card {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Update container visibility */
+#startups .scroll-btn {
+    display: none;
+}
+
+#side-projects .projects-grid .project-card {
+    min-width: 100%;
+    flex-shrink: 0;
+}
+
+/* Adjust project type selector */
+.project-type-selector {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.type-btn {
+    min-width: 150px;
+}
+
+/* Add the animated background for dark mode */
+[data-theme="dark"] body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(1px 1px at 25% 25%, white 1px, transparent 0),
+        radial-gradient(1px 1px at 50% 50%, white 1px, transparent 0),
+        radial-gradient(1px 1px at 75% 75%, white 1px, transparent 0),
+        radial-gradient(2px 2px at 15% 15%, rgba(255, 255, 255, 0.8) 1px, transparent 0),
+        radial-gradient(2px 2px at 85% 85%, rgba(255, 255, 255, 0.8) 1px, transparent 0),
+        linear-gradient(45deg, transparent 0%, rgba(0, 255, 255, 0.1) 50%, transparent 100%);
+    background-color: #050715;
+    background-size: 150px 150px, 130px 130px, 100px 100px, 200px 200px, 250px 250px, 100% 100%;
+    animation: space-float 120s linear infinite;
+    pointer-events: none;
+    z-index: -1;
+}
+
+[data-theme="dark"] body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 50% 50%, rgba(76, 0, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 20% 30%, rgba(0, 255, 255, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 80% 20%, rgba(255, 0, 255, 0.1) 0%, transparent 35%);
+    pointer-events: none;
+    z-index: -1;
+    animation: nebula-float 60s ease-in-out infinite alternate;
+}
+
+/* Space animations */
+@keyframes space-float {
+    0% {
+        background-position: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+    }
+    100% {
+        background-position: 150px 150px, -130px 130px, 100px -100px, -200px 200px, 250px -250px, 0 0;
+    }
+}
+
+@keyframes nebula-float {
+    0% {
+        background-position: 0% 0%, 0% 0%, 0% 0%;
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        background-position: 100% 100%, 100% 0%, 0% 100%;
+        opacity: 0.5;
+    }
+}
+
+/* Update dark theme colors for better contrast with space background */
+[data-theme="dark"] {
+    --primary-color: #00ffff;
+    --secondary-color: #ff00ff;
+    --accent-color: #4A90E2;
+    --text-color: #ffffff;
+    --light-bg: transparent;
+    --card-bg: rgba(5, 7, 21, 0.8);
+    --navbar-bg: rgba(5, 7, 21, 0.95);
+    --shadow-color: rgba(0, 255, 255, 0.2);
+    --border-color: rgba(0, 255, 255, 0.1);
+}
+
+/* Enhance card backdrop filter for better readability */
+[data-theme="dark"] .project-card,
+[data-theme="dark"] .skills-list li {
+    backdrop-filter: blur(10px) brightness(0.8);
+    background: rgba(5, 7, 21, 0.8);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+/* Add star twinkle animation */
+[data-theme="dark"] .star {
+    position: fixed;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle 4s infinite;
+}
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 0.2;
+        transform: scale(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+/* Dark mode hover effects */
+[data-theme="dark"] .nav-link:hover,
+[data-theme="dark"] .social-icon:hover {
+    color: var(--primary-color);
+    text-shadow: 0 0 10px var(--primary-color);
+    transform: translateY(-2px);
+}
+
+[data-theme="dark"] .section-title {
+    animation: neonPulse 2s infinite;
+}
+
+[data-theme="dark"] .butn {
+    border: 1px solid var(--primary-color);
+    background: transparent;
+    color: var(--primary-color);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .butn:hover {
+    background: var(--primary-color);
+    color: var(--light-bg);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+/* Dark mode skill tags */
+[data-theme="dark"] .skills-list li {
+    background: rgba(20, 20, 20, 0.8);
+    border: 1px solid rgba(0, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .skills-list li:hover {
+    background: rgba(0, 255, 255, 0.1);
+    border-color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+/* Smooth transitions */
+.navbar,
+.project-card,
+.skills-list li,
+.butn,
+h1, h2, h3, p {
+    transition: all 0.3s ease;
+}
+
+/* Add scanline effect for dark mode */
+[data-theme="dark"] .project-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        transparent 0%,
+        rgba(0, 255, 255, 0.05) 50%,
+        transparent 100%
+    );
+    background-size: 100% 4px;
+    animation: scanline 6s linear infinite;
+}
+
+@keyframes scanline {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+/* Spaceship cursor styles */
+.spaceship-cursor {
+    display: none;
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    pointer-events: none;
+    z-index: 9999;
+    transform: rotate(-45deg);
+    transition: transform 0.1s ease;
+}
+
+.spaceship-cursor::before {
+    content: '🚀';
+    font-size: 35px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Enhanced trail effect */
+.spaceship-cursor::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(to left, 
+        var(--primary-color) 0%,
+        rgba(0, 255, 255, 0.8) 50%,
+        transparent 100%);
+    transform: translate(-50%, -50%);
+    opacity: 0.7;
+    filter: blur(1px);
+}
+
+/* Show spaceship in dark mode */
+[data-theme="dark"] .spaceship-cursor {
+    display: block;
+}
+
+/* Hide default cursor in dark mode */
+[data-theme="dark"] body {
+    cursor: none;
+}
+
+[data-theme="dark"] a,
+[data-theme="dark"] button {
+    cursor: none;
+}
+
+/* Add these shooting star styles */
+.mega-shooting-star {
+    position: fixed;
+    width: 4px;
+    height: 4px;
+    background: white;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 10;
+    opacity: 0;
+}
+
+.mega-shooting-star::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 150px;
+    height: 3px;
+    background: linear-gradient(to left, transparent, rgba(255, 255, 255, 0.8));
+    transform: translateY(-50%);
+}
+
+@keyframes megaShoot {
+    0% {
+        transform: translate(-10%, -10%) rotate(-45deg);
+        opacity: 0;
+    }
+    15% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 1;
+        filter: brightness(1.5);
+    }
+    100% {
+        transform: translate(120vw, 120vh) rotate(-45deg);
+        opacity: 0;
+    }
+}
+
+/* Add a flash effect for the whole page */
+@keyframes pageFlash {
+    0% {
+        background: rgba(255, 255, 255, 0);
+    }
+    30% {
+        background: rgba(255, 255, 255, 0.1);
+    }
+    100% {
+        background: rgba(255, 255, 255, 0);
+    }
+}
+
+.flash-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9;
+    animation: pageFlash 1s ease-out forwards;
+}
+
+/* Update the dark mode typography styles */
+[data-theme="dark"] .section-title {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    animation: neonPulse 2s infinite;
+}
+
+[data-theme="dark"] .navbar-brand h1 {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 2px;
+    text-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
+}
+
+[data-theme="dark"] .nav-link {
+    font-family: 'Rajdhani', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+[data-theme="dark"] .project-card h3 {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+[data-theme="dark"] .animated-text {
+    font-family: 'Space Mono', monospace;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+}
+
+[data-theme="dark"] .type-btn {
+    font-family: 'Rajdhani', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+[data-theme="dark"] .stat-number {
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+/* Add neon pulse animation */
+@keyframes neonPulse {
+    0% {
+        text-shadow: 0 0 10px rgba(0, 255, 255, 0.5),
+                     0 0 20px rgba(0, 255, 255, 0.3);
+    }
+    50% {
+        text-shadow: 0 0 15px rgba(0, 255, 255, 0.8),
+                     0 0 30px rgba(0, 255, 255, 0.5),
+                     0 0 40px rgba(0, 255, 255, 0.3);
+    }
+    100% {
+        text-shadow: 0 0 10px rgba(0, 255, 255, 0.5),
+                     0 0 20px rgba(0, 255, 255, 0.3);
+    }
+}
+
+/* Enhance hover effects */
+[data-theme="dark"] .nav-link:hover {
+    text-shadow: 0 0 10px var(--primary-color),
+                 0 0 20px var(--primary-color);
+    transform: translateY(-2px);
+}
+
+[data-theme="dark"] .project-card:hover h3 {
+    text-shadow: 0 0 15px var(--primary-color);
+}
+
+/* Additional dark mode typography updates */
+[data-theme="dark"] .centered-content h1 {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 2px;
+    text-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+}
+
+[data-theme="dark"] .key-points .point strong {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--primary-color);
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+[data-theme="dark"] .collaboration-note {
+    font-family: 'Space Mono', monospace;
+    letter-spacing: 1px;
+}
+
+[data-theme="dark"] .button11 {
+    font-family: 'Rajdhani', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+[data-theme="dark"] .footer-info h3 {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 2px;
+    text-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+}
+
+[data-theme="dark"] .footer-info p {
+    font-family: 'Rajdhani', sans-serif;
+    letter-spacing: 1px;
+}
+
+[data-theme="dark"] .copyright {
+    font-family: 'Space Mono', monospace;
+    letter-spacing: 1px;
+}
+
+[data-theme="dark"] .skills-list li {
+    font-family: 'Rajdhani', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+[data-theme="dark"] .modal-content h3 {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+[data-theme="dark"] .twitter-link {
+    font-family: 'Rajdhani', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+[data-theme="dark"] .project-card p {
+    font-family: 'Rajdhani', sans-serif;
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+}
+
+[data-theme="dark"] .about-content p {
+    font-family: 'Rajdhani', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+[data-theme="dark"] .point i {
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+/* Enhanced hover effects */
+[data-theme="dark"] .button11:hover,
+[data-theme="dark"] .twitter-link:hover {
+    text-shadow: 0 0 10px var(--primary-color);
+    transform: translateY(-2px) scale(1.05);
+}
+
+[data-theme="dark"] .footer-social a:hover {
+    transform: translateY(-3px);
+    text-shadow: 0 0 15px var(--primary-color);
+}
+
+[data-theme="dark"] .skills-list li:hover {
+    letter-spacing: 2px;
+}
+
+/* Space Station Command Center */
+.space-station {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: rgba(10, 15, 30, 0.9);
+    border: 2px solid rgba(0, 255, 255, 0.3);
+    border-radius: 15px;
+    padding: 20px;
+    z-index: 100;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+[data-theme="dark"] .space-station {
+    display: block;
+}
+
+.station-title {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--primary-color);
+    font-size: 14px;
+    margin-bottom: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.command-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.command-item {
+    font-family: 'Space Mono', monospace;
+    color: #fff;
+    font-size: 12px;
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.command-item:hover {
+    opacity: 1;
+}
+
+.command-key {
+    background: rgba(0, 255, 255, 0.1);
+    padding: 2px 6px;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    color: var(--primary-color);
+}
+
+.station-icon {
+    width: 16px;
+    height: 16px;
+    color: var(--primary-color);
+}
+
+/* Station animation */
+@keyframes stationPulse {
+    0% {
+        border-color: rgba(0, 255, 255, 0.3);
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+    }
+    50% {
+        border-color: rgba(0, 255, 255, 0.5);
+        box-shadow: 0 0 30px rgba(0, 255, 255, 0.4);
+    }
+    100% {
+        border-color: rgba(0, 255, 255, 0.3);
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+    }
+}
+
+[data-theme="dark"] .space-station {
+    animation: stationPulse 4s infinite;
+}
+
+/* Add this to your existing space station styles */
+.command-item.active {
+    animation: commandPulse 0.5s ease-out;
+    background: rgba(0, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+@keyframes commandPulse {
+    0% {
+        transform: scale(1);
+        background: rgba(0, 255, 255, 0.3);
+    }
+    100% {
+        transform: scale(1.05);
+        background: rgba(0, 255, 255, 0.1);
+    }
+}
+
+.space-station {
+    transform: translateY(0);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.space-station:hover {
+    transform: translateY(-5px);
+}
+
+/* Add a minimize feature */
+.space-station.minimized {
+    transform: translateY(calc(100% - 40px));
+}
+
+.station-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: var(--primary-color);
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.station-toggle:hover {
+    opacity: 1;
 }
