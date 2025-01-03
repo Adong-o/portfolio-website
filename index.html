@@ -20,6 +20,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <title>Adongo Jakes - Frontend Developer</title>
   </head>
   <body>
@@ -28,9 +29,13 @@
         <nav class="navbar navbar-expand-lg navbar-light">
           <div class="container">
             <a class="navbar-brand" href="#"><h1 style="font-weight: bolder; font-family: monospace;">Adongo <span class="logo-dot">.</span></h1></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
+            <div class="menu-toggle">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
             <div class="collapse navbar-collapse" id="navbarMenu">
               <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
@@ -45,6 +50,7 @@
         </nav>
     </div>
  
+    <div class="main-content">
     <section class="social-icons-section" id="home">
         <div class="social-icons">
           <a href="https://github.com/Adong-o?tab=repositories" class="social-icon"><i class="fab fa-github"></i></a>
@@ -98,26 +104,26 @@
           </div>
           <div class="col-md-8">
                     <div class="about-content">
-                        <p>👋 Hi! I'm Adongo, a passionate self-taught frontend developer with a knack for creating engaging web experiences.</p>
-                        
-                        <div class="key-points">
-                            <div class="point">
-                                <i class="fas fa-code"></i>
-                                <p><strong>Tech Stack:</strong> I work with HTML, CSS, JavaScript, and React to build responsive and user-friendly applications.</p>
-                            </div>
+                            <p>👋 Hi! I'm Adongo, a passionate self-taught frontend developer with a knack for creating engaging web experiences.</p>
                             
-                            <div class="point">
-                                <i class="fas fa-lightbulb"></i>
-                                <p><strong>Approach:</strong> I combine clean code with creative problem-solving to deliver solutions that make a real impact.</p>
+                            <div class="key-points">
+                                <div class="point">
+                                    <i class="fas fa-code"></i>
+                                    <p><strong>Tech Stack:</strong> I work with HTML, CSS, JavaScript, and React to build responsive and user-friendly applications.</p>
+                                </div>
+                                
+                                <div class="point">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <p><strong>Approach:</strong> I combine clean code with creative problem-solving to deliver solutions that make a real impact.</p>
+                                </div>
+                                
+                                <div class="point">
+                                    <i class="fas fa-rocket"></i>
+                                    <p><strong>Mission:</strong> Transforming ideas into practical, user-friendly applications that solve real-world problems.</p>
+                                </div>
                             </div>
-                            
-                            <div class="point">
-                                <i class="fas fa-rocket"></i>
-                                <p><strong>Mission:</strong> Transforming ideas into practical, user-friendly applications that solve real-world problems.</p>
-                            </div>
-                        </div>
 
-                        <p class="collaboration-note">Ready to collaborate on your next project? Let's create something amazing together! 🚀</p>
+                            <p class="collaboration-note">Ready to collaborate on your next project? Let's create something amazing together! 🚀</p>
                     </div>
           </div>
         </div>
@@ -127,15 +133,15 @@
       <section class="info-section" id="projects">
         <div class="container">
             <h2 class="section-title">PROJECTS</h2>
-            
-            <!-- Add project type selector -->
-            <div class="project-type-selector">
-                <button class="type-btn active" data-type="side-projects">Side Projects</button>
-                <button class="type-btn" data-type="startups">Startups</button>
-            </div>
+                
+                <!-- Add project type selector -->
+                <div class="project-type-selector">
+                    <button class="type-btn active" data-type="side-projects">Side Projects</button>
+                    <button class="type-btn" data-type="startups">Startups</button>
+                </div>
 
-            <!-- Side Projects Container -->
-            <div class="projects-container active" id="side-projects">
+                <!-- Side Projects Container -->
+                <div class="projects-container active" id="side-projects">
                 <button class="scroll-btn prev-btn" aria-label="Previous project">
                     <i class="fas fa-chevron-left"></i>
                 </button>
@@ -145,34 +151,34 @@
                             <img src="https://i.postimg.cc/66YVGVMC/png-4.jpg" alt="Image Oasis">
                             <div class="p-4">
                                 <h3>imageoasis.art</h3>
-                                <p>A modern wallpaper platform built with HTML, CSS, and JavaScript. Integrated with the Pexels API, it offers a curated collection of high-quality images with features like instant search, infinite scroll, and direct downloads - all without requiring user registration. The clean, minimalist interface ensures a seamless browsing experience.</p>
+                                    <p>A modern wallpaper platform built with HTML, CSS, and JavaScript. Integrated with the Pexels API, it offers a curated collection of high-quality images with features like instant search, infinite scroll, and direct downloads - all without requiring user registration. The clean, minimalist interface ensures a seamless browsing experience.</p>
                                 <a href="https://www.imageoasis.art" target="_blank" class="butn">View Project</a>
-                            </div>
-                        </div>
+            </div>
+          </div>
                         <div class="project-card">
-                            <img src="https://i.postimg.cc/RZscXJSH/png-10.jpg" alt="Github Portfolio Generator">
+                                <img src="https://i.postimg.cc/RZscXJSH/png-10.jpg" alt="Github Portfolio Generator">
                             <div class="p-4">
-                                <h3>Github Portfolio Generator</h3>
-                                <p>Developed using HTML, Tailwind CSS, and JavaScript, this tool automatically generates professional portfolio websites from GitHub profiles. It analyzes your repositories, contributions, and profile data to create a customizable, responsive portfolio that showcases your development journey and achievements.</p>
-                                <a href="https://git-showcase.vercel.app/" target="_blank" class="butn">View Project</a>
-                            </div>
-                        </div>
+                                    <h3>Github Portfolio Generator</h3>
+                                    <p>Developed using HTML, Tailwind CSS, and JavaScript, this tool automatically generates professional portfolio websites from GitHub profiles. It analyzes your repositories, contributions, and profile data to create a customizable, responsive portfolio that showcases your development journey and achievements.</p>
+                                    <a href="https://git-showcase.vercel.app/" target="_blank" class="butn">View Project</a>
+            </div>
+          </div>
                         <div class="project-card">
                             <img src="https://i.postimg.cc/BQyqY6SX/png-5.jpg" alt="Youtube Receipt">
                             <div class="p-4">
                                 <h3>Youtube Receipt</h3>
-                                <p>Built with HTML, Tailwind CSS, and JavaScript, this weekend project transforms YouTube statistics into engaging visual receipts. Leveraging the YouTube Data API, it generates shareable receipts showcasing channel stats, video performance, and engagement metrics in a unique, receipt-like format. Inspired by GitReceipt, it adds a creative twist to sharing YouTube achievements.</p>
+                                    <p>Built with HTML, Tailwind CSS, and JavaScript, this weekend project transforms YouTube statistics into engaging visual receipts. Leveraging the YouTube Data API, it generates shareable receipts showcasing channel stats, video performance, and engagement metrics in a unique, receipt-like format. Inspired by GitReceipt, it adds a creative twist to sharing YouTube achievements.</p>
                                 <a href="https://ytreceipt.vercel.app/" target="_blank" class="butn">View Project</a>
                             </div>
-                        </div>
+            </div>
                         <div class="project-card">
                             <img src="https://i.postimg.cc/Sxbt9gKW/online-shoping-store.png" alt="Online Clothing Shop">
                             <div class="p-4">
                                 <h3>Online Clothing Shop</h3>
-                                <p>A responsive e-commerce platform crafted with HTML, Bootstrap, and JavaScript. Features a modern shopping experience with dynamic product filtering, cart management, and a streamlined checkout process. The clean design and intuitive navigation showcase both technical proficiency and attention to user experience.</p>
+                                    <p>A responsive e-commerce platform crafted with HTML, Bootstrap, and JavaScript. Features a modern shopping experience with dynamic product filtering, cart management, and a streamlined checkout process. The clean design and intuitive navigation showcase both technical proficiency and attention to user experience.</p>
                                 <a href="https://adong-o.github.io/Shop-Adongo/" target="_blank" class="butn">View Project</a>
-                            </div>
-                        </div>
+            </div>
+          </div>
                         <div class="project-card">
                             <img src="https://i.postimg.cc/Vk1Lcc4V/machine.png" alt="Slot Machine">
                             <div class="p-4">
@@ -180,29 +186,29 @@
                                 <p>I created a Slot machine running on terminal. I made it to implement some javascript code i learnt, got help from Stackoverflow, Google, YouTube and ChatGpt abit. It allows one to select the amount of cash to deposit and bet certain amount.</p>
                                 <a href="https://github.com/Adong-o/Slot-Machine" target="_blank" class="butn">View Code</a>
                             </div>
-                        </div>
-                    </div>
-                </div>
+            </div>
+            </div>
+          </div>
                 <button class="scroll-btn next-btn" aria-label="Next project">
                     <i class="fas fa-chevron-right"></i>
                 </button>
-            </div>
+          </div>
 
-            <!-- Startups Container -->
-            <div class="projects-container" id="startups">
-                <div class="projects-wrapper">
-                    <div class="projects-grid-single">
-                        <div class="project-card">
-                            <img src="https://i.postimg.cc/D0StGzmb/png-9.jpg" alt="SoldSaas Platform">
-                            <div class="p-4">
-                                <h3>SoldSaas</h3>
-                                <p>A premier marketplace revolutionizing the way SaaS products are bought and sold on X (Twitter). SoldSaas connects verified makers directly with potential buyers through a secure and streamlined platform. Featuring robust verification systems, seamless X integration, and a trusted transaction process, the platform makes SaaS acquisitions simple and secure. While we continue to enhance the platform with new features, it's already helping makers and buyers connect and transact with confidence.</p>
-                                <a href="https://www.soldsaas.com" target="_blank" class="butn">View Project</a>
+                <!-- Startups Container -->
+                <div class="projects-container" id="startups">
+                    <div class="projects-wrapper">
+                        <div class="projects-grid-single">
+                            <div class="project-card">
+                                <img src="https://i.postimg.cc/D0StGzmb/png-9.jpg" alt="SoldSaas Platform">
+                                <div class="p-4">
+                                    <h3>SoldSaas</h3>
+                                    <p>A premier marketplace revolutionizing the way SaaS products are bought and sold on X (Twitter). SoldSaas connects verified makers directly with potential buyers through a secure and streamlined platform. Featuring robust verification systems, seamless X integration, and a trusted transaction process, the platform makes SaaS acquisitions simple and secure. While we continue to enhance the platform with new features, it's already helping makers and buyers connect and transact with confidence.</p>
+                                    <a href="https://www.soldsaas.com" target="_blank" class="butn">View Project</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
       </section>
       
@@ -244,21 +250,22 @@
 
       <section class="contact-section" id="contact">
         <div class="container12">
-            <h1>Contact Me</h1>
-            <form action="https://formspree.io/f/mbjnbawp" method="POST">
-                <div class="form-group">
-                    <input type="text" id="name" name="name" placeholder="Your Name" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" id="email" name="email" placeholder="Your Email" required>
-                </div>
-                <div class="form-group">
-                    <textarea id="message" name="message" rows="3" placeholder="Your Message" required></textarea>
-                </div>
-                <button type="submit" class="butn">Send</button>
-            </form>
-        </div>
+                <h1>Contact Me</h1>
+        <form action="https://formspree.io/f/mbjnbawp" method="POST">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="3" placeholder="Your Message" required></textarea>
+                    </div>
+          <button type="submit" class="butn">Send</button>
+        </form>
+      </div>
       </section>
+    </div>
 
       <footer>
         <div class="footer-container">

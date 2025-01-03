@@ -1,102 +1,108 @@
-# 🚀 Space-Themed Portfolio Website
+# Modern Terminal-Style Portfolio
 
-> **Note: This portfolio is currently under active development, but it's already packed with some of the coolest features you'll find in a developer portfolio!**
+A dynamic portfolio website featuring a sleek terminal-inspired design with interactive elements and modern aesthetics.
 
-## ✨ What Makes This Portfolio Special
+## 🌟 Features
 
-This isn't just another developer portfolio - it features two distinct themes that showcase both professional polish and creative innovation:
+- **Terminal Theme**
+  - Matrix-style background effects
+  - Command-line inspired interface
+  - Code-style typography using JetBrains Mono font
+  - Modern dark theme with neon accents
 
-### ☀️ Light Theme
-- Clean, professional design
-- Minimalist color scheme
-- Focused content presentation
-- Optimized readability
-- Smooth transitions
+- **Interactive Elements**
+  - Typewriter text animations
+  - Animated navigation menu
+  - Smooth transitions and hover effects
+  - Dynamic project cards
 
-### 🌌 Dark Theme (Space Mode)
-Transform your experience into an interactive space environment with:
-- **Interactive Space Environment** - Complete with twinkling stars and ambient space sounds
-- **Spaceship Cursor** - A custom cursor that follows your movement with realistic physics
-- **Command Center** - A futuristic command interface with keyboard shortcuts
-- **Dynamic Star Field** - Responsive to user interactions
-- **Space Station UI** - Minimizable control center with sound controls
+- **Audio Integration**
+  - Ambient background sounds
+  - Interactive sound effects for commands
+  - Toggle-able audio control
 
-Switch seamlessly between themes using the theme toggle or keyboard shortcut (CTRL + Q)!
+- **Keyboard Commands**
+  - CTRL + G: GitHub
+  - CTRL + X: X (Twitter)
+  - CTRL + I: Instagram
+  - CTRL + M: Mail
+  - CTRL + B: Toggle Sound
 
-### ⌨️ Command Center Shortcuts
-| Command | Action |
-|---------|--------|
-| `CTRL + G` | Open GitHub |
-| `CTRL + X` | Open X (Twitter) |
-| `CTRL + I` | Open Instagram |
-| `CTRL + M` | Open Mail |
-| `CTRL + B` | Toggle Space Sounds |
-| `CTRL + Q` | Switch to Light Mode |
+- **Responsive Design**
+  - Mobile-friendly layout
+  - Adaptive navigation menu
+  - Flexible grid system
+  - Cross-browser compatibility
 
-## 🛠️ Built With
+## 🛠️ Technologies Used
+
 - HTML5
 - CSS3
-- Vanilla JavaScript
+- JavaScript
 - Bootstrap 5
-- Font Awesome
+- Font Awesome Icons
 - Google Fonts
 
-## 🎯 Key Features
-- Fully responsive design
-- Dark/Light mode toggle
-- Interactive project showcase
-- Smooth animations
-- Cross-browser compatibility
-- Optimized performance
-- Keyboard accessibility
-- Modern UI/UX design
+## 🎨 Design Features
 
-## 🔄 Current Development Status
+- Custom animations
+- Command-line aesthetics
+- Professional typography
+- Modern color scheme
+- Minimalist layout
 
-### ✅ Completed
-- Space theme implementation
-- Command center functionality
-- Project showcase
-- Responsive design
-- Interactive elements
-- Sound effects
-- Theme switching
+## 📱 Responsive Features
 
-### 🚧 Under Development
-- Additional space animations
-- More interactive features
-- Enhanced project filtering
-- Performance optimizations
-- Additional keyboard shortcuts
+- Hamburger menu for mobile
+- Adaptive layouts
+- Flexible images
+- Touch-friendly interface
 
-## 🌐 Browser Support
-- Chrome ✅
-- Firefox ✅
-- Safari ✅
-- Edge ✅
+## 🔧 Setup
 
-## 📱 Responsive Design
-Works seamlessly across:
-- Desktop 💻
-- Tablet 📱
-- Mobile 📱
-- Various screen sizes
+1. Clone the repository
+2. Open `index.html` in your browser
+3. No build process required
 
-## 🚀 Getting Started
-1. Visit the live site: [Your Portfolio URL]
-2. Toggle dark mode for the full space experience
-3. Use keyboard shortcuts to navigate
-4. Explore the interactive features
+## 🎵 Audio Features
 
-## 👨‍💻 Author
-**Adongo Jakes**
-- [GitHub](https://github.com/Adong-o)
-- [Twitter](https://twitter.com/AdongoJakes)
-- [LinkedIn](Your LinkedIn URL)
+- Background ambient sounds
+- Interactive sound effects
+- Volume control
+- Fade in/out transitions
 
-## 📝 License
-This project is open source and available under the MIT License.
+## 🚀 Performance
 
----
+- Optimized images
+- Minimal dependencies
+- Efficient animations
+- Fast loading times
 
-> "While this portfolio is still evolving, it's already one of the most interactive and engaging developer portfolios you'll come across. Stay tuned for more amazing features!" 🌟
+## 📄 License
+
+MIT License - feel free to use this for your own portfolio!
+
+## 🤝 Credits
+
+- Background images from Unsplash
+- Icons from Font Awesome
+- Fonts from Google Fonts
+- Sound effects from Mixkit
+
+## 📞 Contact
+
+For any queries or suggestions, feel free to reach out:
+- Twitter: [@AdongoJakes](https://twitter.com/AdongoJakes)
+- GitHub: [Adong-o](https://github.com/Adong-o)
+
+## 💼 Open for Opportunities
+
+I'm currently available for:
+- Frontend Development roles
+- Freelance projects
+- Project collaborations
+- Remote work opportunities
+
+Feel free to reach out if you'd like to work together or discuss potential opportunities!
+
+

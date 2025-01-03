@@ -150,6 +150,10 @@ document.addEventListener('DOMContentLoaded', function() {
         } else if (theme === 'light' && existingStars) {
             existingStars.remove();
         }
+
+        if (theme === 'light') {
+            setInterval(createSandParticles, 2000);
+        }
     }
 
     function createMegaShootingStar() {
@@ -256,8 +260,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const audioToggle = document.querySelector('.space-audio-toggle');
         let audioEnabled = false;
 
-        // Configure space ambience with higher volume
-        spaceAmbience.volume = 0.5; // Increased from 0.2 to 0.5
+        // Configure space ambience
+        spaceAmbience.volume = 0.5;
         
         // Audio toggle with fade effect
         audioToggle.addEventListener('click', () => {
@@ -268,22 +272,20 @@ document.addEventListener('DOMContentLoaded', function() {
             
             if (audioEnabled) {
                 spaceAmbience.play();
-                // Fade in to higher volume
                 let volume = 0;
                 const fadeIn = setInterval(() => {
-                    if (volume < 0.5) { // Increased target volume
-                        volume += 0.02; // Faster fade-in
+                    if (volume < 0.5) {
+                        volume += 0.02;
                         spaceAmbience.volume = volume;
                     } else {
                         clearInterval(fadeIn);
                     }
                 }, 50);
             } else {
-                // Fade out
                 let volume = spaceAmbience.volume;
                 const fadeOut = setInterval(() => {
                     if (volume > 0) {
-                        volume -= 0.02; // Faster fade-out
+                        volume -= 0.02;
                         spaceAmbience.volume = volume;
                     } else {
                         spaceAmbience.pause();
@@ -293,10 +295,10 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        // Update command sound handling with higher volume
-        commandSound.volume = 0.7; // Increased from 0.4 to 0.7
+        // Command sound handling
+        commandSound.volume = 0.7;
 
-        // Play command sound with space theme
+        // Play command sound with keyboard shortcuts
         document.addEventListener('keydown', (e) => {
             if ((e.ctrlKey || e.metaKey) && audioEnabled && 
                 ['g', 'x', 'i', 'm', 'b'].includes(e.key.toLowerCase())) {
@@ -306,8 +308,99 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Call initSpaceFeatures after DOM is loaded
-    initSpaceFeatures();
+    // Initialize audio features
+    document.addEventListener('DOMContentLoaded', () => {
+        initSpaceFeatures();
+    });
+
+    function createSandEffect(element, event) {
+        if (document.documentElement.getAttribute('data-theme') !== 'light') return;
+
+        const rect = element.getBoundingClientRect();
+        const mouseX = event.clientX - rect.left;
+        const mouseY = event.clientY - rect.top;
+
+        for (let i = 0; i < 10; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'sand-particle';
+
+            // Set initial position at mouse point
+            particle.style.left = `${mouseX}px`;
+            particle.style.top = `${mouseY}px`;
+
+            // Random direction
+            const angle = Math.random() * Math.PI * 2;
+            const velocity = Math.random() * 50 + 30;
+            const vx = Math.cos(angle) * velocity;
+            const vy = Math.sin(angle) * velocity;
+
+            // Animate the particle
+            particle.animate([
+                {
+                    transform: 'translate(0, 0) scale(1)',
+                    opacity: 0.8
+                },
+                {
+                    transform: `translate(${vx}px, ${vy}px) scale(0)`,
+                    opacity: 0
+                }
+            ], {
+                duration: Math.random() * 500 + 500,
+                easing: 'ease-out'
+            });
+
+            element.appendChild(particle);
+
+            // Remove particle after animation
+            setTimeout(() => particle.remove(), 1000);
+        }
+    }
+
+    // Add event listeners when DOM is loaded
+    const elements = document.querySelectorAll('h1, h2, h3, .profile-picture');
+    
+    elements.forEach(element => {
+        element.addEventListener('mousemove', (e) => {
+            createSandEffect(element, e);
+        });
+    });
+
+    // Add background to navbar when scrolling
+    window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+
+    // Hamburger menu functionality
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        navbarCollapse.classList.toggle('show');
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!menuToggle.contains(e.target) && 
+            !navbarCollapse.contains(e.target) && 
+            navbarCollapse.classList.contains('show')) {
+            menuToggle.classList.remove('active');
+            navbarCollapse.classList.remove('show');
+        }
+    });
+
+    // Close menu when clicking nav links
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            menuToggle.classList.remove('active');
+            navbarCollapse.classList.remove('show');
+        });
+    });
 });
 
 // Theme toggle functionality
@@ -363,4 +456,120 @@ document.addEventListener('keydown', function(event) {
     if (event.key === 'Escape') {
         closeModal();
     }
+});
+
+function createDesertEffects() {
+    if (document.documentElement.getAttribute('data-theme') === 'light') {
+        // Create mirage effect
+        const mirage = document.createElement('div');
+        mirage.className = 'mirage';
+        document.body.appendChild(mirage);
+
+        // Create dust storm effect
+        const dustStorm = document.createElement('div');
+        dustStorm.className = 'dust-storm';
+        document.body.appendChild(dustStorm);
+
+        // Enhanced sand particles
+        createSandParticles();
+    }
+}
+
+function createSandParticles() {
+    if (document.documentElement.getAttribute('data-theme') === 'light') {
+        for (let i = 0; i < 30; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'sand-particle';
+            
+            // Random size between 1 and 4 pixels
+            const size = Math.random() * 3 + 1;
+            particle.style.width = `${size}px`;
+            particle.style.height = `${size}px`;
+            
+            // Random starting position
+            particle.style.left = `${Math.random() * -20}vw`;
+            particle.style.top = `${Math.random() * 100}vh`;
+            
+            // Random animation duration and delay
+            const duration = Math.random() * 8 + 4;
+            const delay = Math.random() * 5;
+            particle.style.animation = `sandFloat ${duration}s ${delay}s infinite linear`;
+            
+            document.body.appendChild(particle);
+            
+            // Clean up
+            setTimeout(() => particle.remove(), (duration + delay) * 1000);
+        }
+    }
+}
+
+// Update theme toggle to include desert effects
+function updateThemeIcon(theme) {
+    const themeIcon = document.querySelector('.theme-toggle i');
+    themeIcon.className = theme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+    
+    // Remove existing effects
+    document.querySelectorAll('.mirage, .dust-storm, .sand-particle').forEach(el => el.remove());
+    
+    // Add effects for light theme
+    if (theme === 'light') {
+        createDesertEffects();
+        setInterval(createSandParticles, 2000);
+    }
+}
+
+// Typewriter effect for text elements
+function initTypewriterEffects() {
+    const textElements = document.querySelectorAll('.typing-text');
+    
+    textElements.forEach(element => {
+        const text = element.textContent;
+        element.textContent = '';
+        element.classList.add('typing-effect');
+        
+        let charIndex = 0;
+        const typeChar = () => {
+            if (charIndex < text.length) {
+                element.textContent += text.charAt(charIndex);
+                charIndex++;
+                setTimeout(typeChar, Math.random() * 100 + 50);
+            } else {
+                element.classList.remove('typing-effect');
+            }
+        };
+        
+        typeChar();
+    });
+}
+
+// Matrix background effect
+function createMatrixBackground() {
+    const matrixBg = document.createElement('div');
+    matrixBg.className = 'matrix-bg';
+    document.body.appendChild(matrixBg);
+
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    const columns = Math.floor(window.innerWidth / 20);
+
+    for (let i = 0; i < columns; i++) {
+        const character = document.createElement('span');
+        character.className = 'matrix-character';
+        character.style.left = `${i * 20}px`;
+        character.style.animationDelay = `${Math.random() * 2}s`;
+        character.style.animationDuration = `${Math.random() * 3 + 2}s`;
+        character.textContent = characters[Math.floor(Math.random() * characters.length)];
+        matrixBg.appendChild(character);
+    }
+}
+
+// Initialize effects when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    initTypewriterEffects();
+    createMatrixBackground();
+});
+
+// Update HTML elements to use the typing effect
+window.addEventListener('load', () => {
+    const mainTitle = document.querySelector('.centered-content h1');
+    mainTitle.classList.add('typing-text');
 });
