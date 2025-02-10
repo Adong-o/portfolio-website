@@ -1,5 +1,5 @@
 const titles = [
-    "Human Being","Web Developer","Front-End Developer","Problem Solver","Entrepreneur","Indie Maker"
+    "Human Being","Web Developer","Solopreneur","Problem Solver","Indie Maker"
     
 ];
 
