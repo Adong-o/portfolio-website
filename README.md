@@ -80,7 +80,7 @@ A dynamic portfolio website featuring a sleek terminal-inspired design with inte
 
 ## 📄 License
 
-MIT License - feel free to use this for your own portfolio!
+MIT License - feel free to use this for your own portfolio!, a shoutout would be nice gesture.
 
 ## 🤝 Credits
 
