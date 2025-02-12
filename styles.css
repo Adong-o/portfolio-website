@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 
-/* Global Styles */
 :root {
   --primary-color: #1a1a1a;
   --secondary-color: #FF6B6B;
@@ -51,7 +50,6 @@ body {
   margin: 0;
 }
 
-/* Updated Navbar Styles */
 .navbar {
     padding: 1.5rem 0;
     background: transparent !important; /* Remove background */
@@ -63,7 +61,6 @@ body {
     transition: all 0.3s ease;
 }
 
-/* Navbar brand/logo */
 .navbar-brand h1 {
     color: #fff;
     font-size: 1.8rem;
@@ -72,7 +69,6 @@ body {
     margin: 0;
 }
 
-/* Navigation links */
 .nav-link {
     color: #fff !important;
     font-weight: 500;
@@ -82,7 +78,6 @@ body {
     transition: all 0.3s ease;
 }
 
-/* Hover effect for nav links */
 .nav-link::after {
     content: '';
     position: absolute;
@@ -104,7 +99,6 @@ body {
     transform: translateY(-2px);
 }
 
-/* Mobile menu button */
 .navbar-toggler {
     border: none;
     padding: 0.5rem;
@@ -119,13 +113,11 @@ body {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
 }
 
-/* Optional: Add a slight background when scrolling */
 .navbar.scrolled {
     background: rgba(0, 0, 0, 0.3) !important;
     backdrop-filter: blur(10px);
 }
 
-/* Remove any existing navbar backgrounds */
 [data-theme="light"] .navbar {
     background: transparent !important;
     box-shadow: none;
@@ -135,7 +127,6 @@ body {
     color: #fff !important;
 }
 
-/* Hero Section */
   .social-icons-section {
   padding: 2rem 0 4rem;
   background-color: transparent;
@@ -205,7 +196,6 @@ body {
   color: var(--secondary-color);
 }
 
-/* Projects Section */
 .section-title {
   text-align: center;
   color: var(--primary-color);
@@ -231,7 +221,6 @@ body {
   border-radius: 20px 20px 0 0;
 }
 
-/* Skills Section */
 .skills-section {
   background-color: transparent;
   padding: 4rem 0 2rem;

@@ -7,29 +7,22 @@ let currentIndex = 0;
 const textElement = document.querySelector('.animated-text');
 
 function animateText() {
-    // Fade out
     textElement.style.opacity = '0';
     
     setTimeout(() => {
-        // Change text
         textElement.textContent = titles[currentIndex];
         
-        // Fade in
         textElement.style.opacity = '1';
         
-        // Update index
         currentIndex = (currentIndex + 1) % titles.length;
-    }, 500); // Half of the total animation time
+    }, 500); 
 }
 
-// Initial text
 textElement.textContent = titles[0];
 
-// Start animation cycle
 setInterval(animateText, 2000);
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Project type switcher
     const typeButtons = document.querySelectorAll('.type-btn');
     const projectContainers = document.querySelectorAll('.projects-container');
     const sideProjectsGrid = document.querySelector('#side-projects .projects-grid');
@@ -53,7 +46,6 @@ document.addEventListener('DOMContentLoaded', function() {
         updateButtons();
     }
 
-    // Project type switching
     typeButtons.forEach(button => {
         button.addEventListener('click', () => {
             typeButtons.forEach(btn => btn.classList.remove('active'));
@@ -64,7 +56,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 container.classList.remove('active');
                 if (container.id === targetType) {
                     container.classList.add('active');
-                    // Reset scroll position when switching to side projects
                     if (targetType === 'side-projects') {
                         currentProject = 0;
                         scrollToProject(0);
@@ -74,7 +65,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Side projects navigation
     if (prevBtn && nextBtn) {
         prevBtn.addEventListener('click', () => {
             if (currentProject > 0) {
@@ -89,34 +79,28 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Initial button state
     updateButtons();
     initThemeToggle();
 
-    // Spaceship cursor
     const spaceship = document.querySelector('.spaceship-cursor');
     let mouseX = 0;
     let mouseY = 0;
     let spaceshipX = 0;
     let spaceshipY = 0;
-    let speed = 0.1; // Adjust for smoother/faster movement
+    let speed = 0.1; 
 
     document.addEventListener('mousemove', (e) => {
         mouseX = e.clientX;
         mouseY = e.clientY;
 
-        // Calculate angle for rotation
         const dx = mouseX - spaceshipX;
         const dy = mouseY - spaceshipY;
         const angle = Math.atan2(dy, dx) * 180 / Math.PI;
         
-        // Update spaceship rotation
         spaceship.style.transform = `translate(${mouseX}px, ${mouseY}px) rotate(${angle}deg)`;
     });
 
-    // Smooth animation
     function animate() {
-        // Smooth position updating
         spaceshipX += (mouseX - spaceshipX) * speed;
         spaceshipY += (mouseY - spaceshipY) * speed;
         
@@ -139,7 +123,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Call createStars when switching to dark mode
     function updateThemeIcon(theme) {
         const themeIcon = document.querySelector('.theme-toggle i');
         themeIcon.className = theme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
@@ -180,21 +163,18 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 1000);
     }
 
-    // Update periodic shooting star interval
-    setInterval(createMegaShootingStar, 10000);
+    setInterval(createMegaShootingStar, 100000); //the more zeros causes the delay, best
 
-    // Update the scroll handler and shooting star timing
     let scrollTimeout;
     document.addEventListener('scroll', () => {
         if (scrollTimeout) clearTimeout(scrollTimeout);
         scrollTimeout = setTimeout(() => {
             createMegaShootingStar();
-        }, 50); // Reduced from 150ms to 50ms for faster response
+        }, 100); 
     });
 
-    // Add keyboard shortcut handler
+    // station type navigation
     document.addEventListener('keydown', function(e) {
-        // Check for both CTRL and Command (Meta) key for cross-platform support
         if (!(e.ctrlKey || e.metaKey) || document.documentElement.getAttribute('data-theme') !== 'dark') return;
 
         switch(e.key.toLowerCase()) {
@@ -204,11 +184,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 break;
             case 'x':
                 e.preventDefault();
-                window.open('https://twitter.com/AdongoDev', '_blank');
+                window.open('https://twitter.com/AdongoJakes', '_blank');
                 break;
             case 'i':
                 e.preventDefault();
-                window.open('https://www.instagram.com/adongo_dev/', '_blank');
+                window.open('https://www.instagram.com/lord.adongo', '_blank');
                 break;
             case 'm':
                 e.preventDefault();
@@ -295,10 +275,9 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        // Command sound handling
-        commandSound.volume = 0.7;
+        commandSound.volume = 0.9;
 
-        // Play command sound with keyboard shortcuts
+
         document.addEventListener('keydown', (e) => {
             if ((e.ctrlKey || e.metaKey) && audioEnabled && 
                 ['g', 'x', 'i', 'm', 'b'].includes(e.key.toLowerCase())) {
@@ -308,11 +287,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Initialize audio features
     document.addEventListener('DOMContentLoaded', () => {
         initSpaceFeatures();
     });
 
+
+    //from here the code was made by cursor agent for the sand/desert effect that i ended up not using, went matrix instead.
     function createSandEffect(element, event) {
         if (document.documentElement.getAttribute('data-theme') !== 'light') return;
 
@@ -573,3 +553,11 @@ window.addEventListener('load', () => {
     const mainTitle = document.querySelector('.centered-content h1');
     mainTitle.classList.add('typing-text');
 });
+
+//updates for this portfolio
+
+//  - restyle the projects section to look more like agency projects showcase
+//  - add a 2 SpeechRecognitionResult, what i do and the pricebox feature for what i build and the prices with a button to reach out to me
+//  - meta tags with the relevant titles for seo for google outreach. 
+//  - start doing blogs in this website after purchasing domains. 
+//  - buy a domain and subscription to lovable maybe this year.
