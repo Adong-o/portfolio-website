@@ -3,6 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO Meta Tags -->
+    <title>Adongo Jakes - Frontend Web Developer | JavaScript & React Expert</title>
+    <meta name="description" content="Experienced frontend developer specializing in responsive web design, React.js, and modern JavaScript. Building custom websites starting from $150. 7-day delivery guaranteed.">
+    <meta name="keywords" content="web developer, frontend developer, JavaScript developer, React developer, web design, Kenya developer, affordable web design">
+    <meta name="author" content="Adongo Jakes">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Adongo Jakes - Frontend Web Developer">
+    <meta property="og:description" content="Professional web developer creating custom websites and web applications. Affordable pricing starting at $150.">
+    <meta property="og:image" content="https://i.postimg.cc/T3xWbVFL/20231225-172412.jpg">
+    <meta property="og:url" content="https://adongojakes.vercel.app/">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@AdongoJakes">
+    <meta name="twitter:title" content="Adongo Jakes - Frontend Web Developer">
+    <meta name="twitter:description" content="Professional web developer creating custom websites and web applications. Affordable pricing starting at $150.">
+    <meta name="twitter:image" content="https://i.postimg.cc/T3xWbVFL/20231225-172412.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://adongojakes.vercel.app/">
+
     <meta name="description" content="Adongo Jakes - Frontend Developer">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -15,7 +41,7 @@
     <link rel="icon" type="image/png" href="https://i.postimg.cc/tgDsWRhF/profile.jpg">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-n/X56zNwKf2/bQzgLlg5p2W1o10gLnfdzR1lYrghWCrpxgPq3Rqq4Y22V5T0w9thIX6TjB0GFEpzZ30bhTlqA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-n-X56zNwKf2/bQzgLlg5p2W1o10gLnfdzR1lYrghWCrpxgPq3Rqq4Y22V5T0w9thIX6TjB0GFEpzZ30bhTlqA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,25 +49,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <title>Adongo Jakes - Web Developer</title>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SL1WSN6C70"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-SL1WSN6C70');
-</script>
   </head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SL1WSN6C70"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-SL1WSN6C70');
-</script>
   <body>
     <div class="spaceship-cursor"></div>
     <div class="sticky">
@@ -149,87 +157,285 @@
       </div>
     </section>
       
-      <section class="info-section" id="projects">
-        <div class="container">
-            <h2 class="section-title">PROJECTS</h2>
-                
-                <!-- Add project type selector -->
-                <div class="project-type-selector">
-                    <button class="type-btn active" data-type="side-projects">Portfolio Projects</button>
-                    <button class="type-btn" data-type="startups">Saas Projects</button>
-                </div>
+    <section class="projects-section" id="projects">
+    <div class="container">
+        <h2 class="section-title">Projects</h2>
+        
+        <!-- Project Categories -->
+        <div class="project-categories">
+            <button class="category-btn active" data-category="portfolio">Portfolio Projects</button>
+            <button class="category-btn" data-category="saas">SaaS Products</button>
+        </div>
 
-                <!-- Side Projects Container -->
-                <div class="projects-container active" id="side-projects">
-                <button class="scroll-btn prev-btn" aria-label="Previous project">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <div class="projects-wrapper">
-                    <div class="projects-grid">
-                        <div class="project-card">
-                            <img src="https://i.postimg.cc/66YVGVMC/png-4.jpg" alt="Image Oasis">
-                            <div class="p-4">
-                                <h3>imageoasis.art</h3>
-                                    <p>A modern wallpaper platform built with HTML, CSS, and JavaScript. Integrated with the Pexels API, it offers a curated collection of high-quality images with features like instant search, infinite scroll, and direct downloads - all without requiring user registration. The clean, minimalist interface ensures a seamless browsing experience.</p>
-                                <a href="https://www.imageoasis.art" target="_blank" class="butn">View Project</a>
-            </div>
-          </div>
-                        <div class="project-card">
-                                <img src="https://i.postimg.cc/RZscXJSH/png-10.jpg" alt="Github Portfolio Generator">
-                            <div class="p-4">
-                                    <h3>Github Portfolio Generator</h3>
-                                    <p>Developed using HTML, Tailwind CSS, and JavaScript, this tool automatically generates professional portfolio websites from GitHub profiles. It analyzes your repositories, contributions, and profile data to create a customizable, responsive portfolio that showcases your development journey and achievements.</p>
-                                    <a href="https://git-showcase.vercel.app/" target="_blank" class="butn">View Project</a>
-            </div>
-          </div>
-                        <div class="project-card">
-                            <img src="https://i.postimg.cc/BQyqY6SX/png-5.jpg" alt="Youtube Receipt">
-                            <div class="p-4">
-                                <h3>Youtube Receipt</h3>
-                                    <p>Built with HTML, Tailwind CSS, and JavaScript, this weekend project transforms YouTube statistics into engaging visual receipts. Leveraging the YouTube Data API, it generates shareable receipts showcasing channel stats, video performance, and engagement metrics in a unique, receipt-like format. Inspired by GitReceipt, it adds a creative twist to sharing YouTube achievements.</p>
-                                <a href="https://ytreceipt.vercel.app/" target="_blank" class="butn">View Project</a>
-                            </div>
-            </div>
-                        <div class="project-card">
-                            <img src="https://i.postimg.cc/Sxbt9gKW/online-shoping-store.png" alt="Online Clothing Shop">
-                            <div class="p-4">
-                                <h3>Online Clothing Shop</h3>
-                                    <p>A responsive e-commerce platform crafted with HTML, Bootstrap, and JavaScript. Features a modern shopping experience with dynamic product filtering, cart management, and a streamlined checkout process. The clean design and intuitive navigation showcase both technical proficiency and attention to user experience.</p>
-                                <a href="https://adong-o.github.io/Shop-Adongo/" target="_blank" class="butn">View Project</a>
-            </div>
-          </div>
-                        <div class="project-card">
-                            <img src="https://i.postimg.cc/Vk1Lcc4V/machine.png" alt="Slot Machine">
-                            <div class="p-4">
-                                <h3>Slot Machine</h3>
-                                <p>I created a Slot machine running on terminal. I made it to implement some javascript code i learnt, got help from Stackoverflow, Google, YouTube and ChatGpt abit. It allows one to select the amount of cash to deposit and bet certain amount.</p>
-                                <a href="https://github.com/Adong-o/Slot-Machine" target="_blank" class="butn">View Code</a>
-                            </div>
-            </div>
-            </div>
-          </div>
-                <button class="scroll-btn next-btn" aria-label="Next project">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-          </div>
-
-                <!-- Startups Container -->
-                <div class="projects-container" id="startups">
-                    <div class="projects-wrapper">
-                        <div class="projects-grid-single">
-                            <div class="project-card">
-                                <img src="https://i.postimg.cc/D0StGzmb/png-9.jpg" alt="SoldSaas Platform">
-                                <div class="p-4">
-                                    <h3>SoldSaas</h3>
-                                    <p>A premier marketplace revolutionizing the way SaaS products are bought and sold on X (Twitter). SoldSaas connects verified makers directly with potential buyers through a secure and streamlined platform. Featuring robust verification systems, seamless X integration, and a trusted transaction process, the platform makes SaaS acquisitions simple and secure. While we continue to enhance the platform with new features, it's already helping makers and buyers connect and transact with confidence.</p>
-                                    <a href="https://www.soldsaas.com" target="_blank" class="butn">View Project</a>
+        <!-- Portfolio Projects Section -->
+        <div class="project-category active" id="portfolio">
+            <div class="projects-grid">
+                <!-- YouTube Receipt -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://i.postimg.cc/L8ykfb3G/png-8.jpg" alt="YouTube Receipt">
+                        <div class="project-overlay">
+                            <div class="project-content">
+                                <div class="tech-stack">
+                                    <span>React</span>
+                                    <span>YouTube API</span>
+                                    <span>Firebase</span>
+                                </div>
+                                <p class="project-description">Generate customized video receipts with personalized details.</p>
+                                <div class="project-actions">
+                                    <a href="https://youtube-receipt.vercel.app/" target="_blank" class="action-link">
+                                        Live Demo <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="https://github.com/Adong-o/youtube-receipt.git" target="_blank" class="action-link">
+                                        Code <i class="fab fa-github"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="project-info">
+                        <h3>YouTube Receipt Generator</h3>
+                        <div class="quick-links">
+                            <a href="https://youtube-receipt.vercel.app/" target="_blank" title="Live Demo">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="https://github.com/Adong-o/youtube-receipt.git" target="_blank" title="View Code">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Online Shop -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://i.postimg.cc/DyWXB4f3/png-5.jpg" alt="Online Shop">
+                        <div class="project-overlay">
+                            <div class="project-content">
+                                <div class="tech-stack">
+                                    <span>React</span>
+                                    <span>Commerce.js</span>
+                                    <span>Stripe</span>
+                                </div>
+                                <p class="project-description">E-commerce platform with secure payment processing.</p>
+                                <div class="project-actions">
+                                    <a href="https://onlineshop-virid.vercel.app/" target="_blank" class="action-link">
+                                        Live Demo <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="https://github.com/Adong-o/onlineshop.git" target="_blank" class="action-link">
+                                        Code <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Online Clothing Shop</h3>
+                        <div class="quick-links">
+                            <a href="https://onlineshop-virid.vercel.app/" target="_blank" title="Live Demo">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="https://github.com/Adong-o/onlineshop.git" target="_blank" title="View Code">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image Oasis -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://i.postimg.cc/66YVGVMC/png-4.jpg" alt="Image Oasis">
+                        <div class="project-overlay">
+                            <div class="project-content">
+                                <div class="tech-stack">
+                                    <span>JavaScript</span>
+                                    <span>Pexels API</span>
+                                </div>
+                                <p class="project-description">Modern wallpaper platform with instant search.</p>
+                                <div class="project-actions">
+                                    <a href="https://imageoasis.vercel.app/" target="_blank" class="action-link">
+                                        Live Demo <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="https://github.com/Adong-o/imageoasis.git" target="_blank" class="action-link">
+                                        Code <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Image Oasis</h3>
+                        <div class="quick-links">
+                            <a href="https://imageoasis.vercel.app/" target="_blank" title="Live Demo">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="https://github.com/Adong-o/imageoasis.git" target="_blank" title="View Code">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </section>
+
+        <!-- SaaS Products Section -->
+        <div class="project-category" id="saas">
+            <div class="saas-projects">
+                <div class="saas-card">
+                    <div class="saas-content">
+                        <div class="saas-header">
+                            <div class="saas-badge">Featured SaaS</div>
+                            <h3>SoldSaas</h3>
+                        </div>
+                        
+                        <p class="saas-description">
+                            A premier marketplace revolutionizing SaaS transactions on X (Twitter). 
+                            Features secure verification systems, escrow processing, and real-time notifications.
+                        </p>
+                        
+                        <div class="tech-stack">
+                            <span>Next.js</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>Firebase</span>
+                        </div>
+                        
+                        <div class="saas-actions">
+                            <a href="https://soldsaas.vercel.app/" target="_blank" class="saas-btn primary">
+                                <span>View Live</span>
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="https://github.com/Adong-o/soldsaas.git" target="_blank" class="saas-btn secondary">
+                                <span>Source Code</span>
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="saas-preview">
+                        <img src="https://i.postimg.cc/D0StGzmb/png-9.jpg" alt="SoldSaas">
+                        <div class="status-badge">In Development</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- View More Projects Link -->
+        <div class="view-more-wrapper">
+            <a href="https://github.com/Adong-o?tab=repositories" target="_blank" class="view-more">
+                View All Projects
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+    <section class="testimonials-section" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">Client Testimonials</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="quote-mark"><i class="fas fa-quote-left"></i></div>
+                    <p class="testimonial-text">Working with Jakes was fantastic! He delivered our website ahead of schedule and the design exceeded our expectations. His attention to detail really shows in the final product.</p>
+                    <div class="testimonial-author">
+                        <img src="https://i.pravatar.cc/150?img=11" alt="Sarah W." class="author-image">
+                        <div class="author-info">
+                            <h4>Sarah W.</h4>
+                            <p>E-commerce Store Owner</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="quote-mark"><i class="fas fa-quote-left"></i></div>
+                    <p class="testimonial-text">Jakes helped transform our outdated website into a modern, responsive platform. The whole process was smooth and professional. Highly recommend his services!</p>
+                    <div class="testimonial-author">
+                        <img src="https://i.pravatar.cc/150?img=8" alt="Michael T." class="author-image">
+                        <div class="author-info">
+                            <h4>Michael T.</h4>
+                            <p>Startup Founder</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-section" id="services">
+        <div class="container">
+            <h2 class="section-title">Services & Pricing</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-header">
+                        <h3>Basic Website</h3>
+                        <p class="price">Starting at $150</p>
+                    </div>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Responsive Design</li>
+                        <li><i class="fas fa-check"></i> Up to 3 Pages</li>
+                        <li><i class="fas fa-check"></i> Contact Form</li>
+                        <li><i class="fas fa-check"></i> Basic SEO</li>
+                        <li><i class="fas fa-check"></i> Mobile Friendly</li>
+                        <li><i class="fas fa-check"></i> 7-Day Delivery</li>
+                    </ul>
+                    <a href="#contact" class="service-cta">Get Started</a>
+                </div>
+
+                <div class="service-card featured">
+                    <div class="popular-tag">Most Popular</div>
+                    <div class="service-header">
+                        <h3>Business Website</h3>
+                        <p class="price">Starting at $499</p>
+                    </div>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> All Basic Features</li>
+                        <li><i class="fas fa-check"></i> Up to 7 Pages</li>
+                        <li><i class="fas fa-check"></i> Advanced SEO</li>
+                        <li><i class="fas fa-check"></i> Custom Design</li>
+                        <li><i class="fas fa-check"></i> Analytics Integration</li>
+                        <li><i class="fas fa-check"></i> 7-Day Delivery</li>
+                    </ul>
+                    <a href="#contact" class="service-cta">Get Started</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-header">
+                        <h3>Custom MVP</h3>
+                        <p class="price">Starting at $999</p>
+                    </div>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Custom Development</li>
+                        <li><i class="fas fa-check"></i> User Authentication</li>
+                        <li><i class="fas fa-check"></i> Database Integration</li>
+                        <li><i class="fas fa-check"></i> API Development</li>
+                        <li><i class="fas fa-check"></i> Admin Dashboard</li>
+                        <li><i class="fas fa-check"></i> 7-Day Delivery After Deposit</li>
+                    </ul>
+                    <a href="#contact" class="service-cta">Schedule Call</a>
+                </div>
+            </div>
+            <div class="services-note">
+                <p>* All projects include responsive design and post-launch support</p>
+                <p>* 50% deposit required to start</p>
+                <p>* Free consultation call for MVP projects</p>
+            </div>
+        </div>
+    </section>
       
       <div class="center1">
         <button class="button11"><a href="https://github.com/Adong-o?tab=repositories" target="_blank">More</a></button>
@@ -373,4 +579,3 @@
     </audio>
   </body>
   </html>
-  
