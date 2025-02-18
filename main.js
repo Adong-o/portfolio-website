@@ -456,6 +456,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// Project category switching
+const categoryButtons = document.querySelectorAll('.category-btn');
+const projectCategories = document.querySelectorAll('.project-category');
+
+categoryButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Remove active class from all buttons
+        categoryButtons.forEach(btn => btn.classList.remove('active'));
+        
+        // Add active class to clicked button
+        button.classList.add('active');
+        
+        // Hide all categories
+        projectCategories.forEach(category => {
+            category.classList.remove('active');
+        });
+        
+        // Show selected category
+        const selectedCategory = document.getElementById(button.dataset.category);
+        selectedCategory.classList.add('active');
+    });
+});
+
 // Theme toggle functionality
 function initThemeToggle() {
     const themeToggle = document.querySelector('.theme-toggle');
