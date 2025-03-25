@@ -657,3 +657,63 @@ window.addEventListener('load', () => {
 //  - meta tags with the relevant titles for seo for google outreach. 
 //  - start doing blogs in this website after purchasing domains. 
 //  - buy a domain and subscription to lovable maybe this year.
+
+// Project Carousel Functionality
+document.querySelectorAll('.projects-carousel').forEach(carousel => {
+    const container = carousel.querySelector('.carousel-container');
+    const grid = carousel.querySelector('.projects-grid');
+    const cards = grid.children;
+    const prevBtn = carousel.querySelector('.prev-btn');
+    const nextBtn = carousel.querySelector('.next-btn');
+    const dotsContainer = carousel.querySelector('.carousel-dots');
+    
+    let currentIndex = 0;
+    let cardWidth = 0;
+    let cardsPerView = 1;
+
+    // Create dots
+    const totalSlides = Math.ceil(cards.length / cardsPerView);
+    for (let i = 0; i < totalSlides; i++) {
+        const dot = document.createElement('div');
+        dot.classList.add('dot');
+        if (i === 0) dot.classList.add('active');
+        dotsContainer.appendChild(dot);
+    }
+
+    const updateCarousel = () => {
+        cardWidth = cards[0].offsetWidth + 30; // Including gap
+        cardsPerView = window.innerWidth >= 1200 ? 3 : window.innerWidth >= 992 ? 2 : 1;
+        const offset = -currentIndex * cardWidth * cardsPerView;
+        grid.style.transform = `translateX(${offset}px)`;
+        
+        // Update dots
+        dotsContainer.querySelectorAll('.dot').forEach((dot, i) => {
+            dot.classList.toggle('active', i === Math.floor(currentIndex));
+        });
+    };
+
+    const moveCarousel = (direction) => {
+        const maxIndex = Math.ceil(cards.length / cardsPerView) - 1;
+        currentIndex = Math.max(0, Math.min(currentIndex + direction, maxIndex));
+        updateCarousel();
+    };
+
+    // Event listeners
+    prevBtn.addEventListener('click', () => moveCarousel(-1));
+    nextBtn.addEventListener('click', () => moveCarousel(1));
+    window.addEventListener('resize', updateCarousel);
+
+    // Touch support
+    let touchStartX = 0;
+    container.addEventListener('touchstart', e => touchStartX = e.touches[0].clientX);
+    container.addEventListener('touchend', e => {
+        const touchEndX = e.changedTouches[0].clientX;
+        const diff = touchStartX - touchEndX;
+        if (Math.abs(diff) > 50) {
+            moveCarousel(diff > 0 ? 1 : -1);
+        }
+    });
+
+    // Initialize carousel
+    updateCarousel();
+});
