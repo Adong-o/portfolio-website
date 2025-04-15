@@ -5,9 +5,9 @@ A dynamic portfolio website featuring a sleek terminal-inspired design with inte
 ## 🌟 Features
 
 - **Terminal Theme**
-  - Matrix-style background effects
-  - Command-line inspired interface
-  - Code-style typography using JetBrains Mono font
+  - Matrix-style background effects.
+  - Command-line inspired interface.
+  - Code-style typography using JetBrains Mono font.
   - Modern dark theme with neon accents
 
 - **Interactive Elements**
