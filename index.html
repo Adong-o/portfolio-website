@@ -1,465 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="description" content="Adongo Jakes - Frontend Developer">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link
-      rel="stylesheet"
-      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <link rel="icon" type="image/png" href="https://i.postimg.cc/T3xWbVFL/20231225-172412.jpg">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-n/X56zNwKf2/bQzgLlg5p2W1o10gLnfdzR1lYrghWCrpxgPq3Rqq4Y22V5T0w9thIX6TjB0GFEpzZ30bhTlqA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="styles.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joe Adongo | Frontend Developer</title>
+    <meta name="description" content="Portfolio of Joe Adongo, a Frontend Developer building modern web experiences.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <title>Adongo Jakes - Web Developer</title>
-  </head>
-  <body>
-    <div class="spaceship-cursor"></div>
-    <div class="sticky">
-        <nav class="navbar navbar-expand-lg navbar-light">
-          <div class="container">
-            <a class="navbar-brand" href="#"><h1 style="font-weight: bolder; font-family: monospace;">Adongo <span class="logo-dot">.</span></h1></a>
-            <div class="menu-toggle">
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="#" class="logo">Adongo<span class="dot">.</span></a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero-title">
+                    Building digital <br>
+                    experiences that matter.
+                </h1>
+                <p class="hero-subtitle">
+                    Hi, I'm Joe Adongo. A Frontend Developer focused on creating clean, accessible, and performant web
+                    applications.
+                </p>
+                <div class="hero-cta">
+                    <a href="#work" class="btn btn-primary">View Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
                 </div>
             </div>
-            <div class="collapse navbar-collapse" id="navbarMenu">
-              <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-              </ul>
-              
-            </div>
-          </div>
-        </nav>
-    </div>
- 
-    <div class="main-content">
-    <section class="social-icons-section" id="home">
-        <div class="social-icons">
-          <a href="https://github.com/Adong-o" class="social-icon"><i class="fab fa-github"></i></a>
-          <a href="https://twitter.com/AdongoJakes" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
-          <a href="https://www.instagram.com/lord.adongo/" class="social-icon"><i class="fab fa-instagram"></i></a>
-          <button class="theme-toggle social-icon" aria-label="Toggle theme">
-              <i class="fas fa-sun"></i>
-          </button>
-        </div>
-        <div class="centered-content">
-          <h1 style="font-size: 50px; font-weight: bold;">Hi, I'm Adongo</h1>
-          <h4 class="animated-text" style="font-style: italic;"></h4>
+        </section>
 
-          <div class="quote-container">
-              <p class="quote">"I fear not the man who has practiced 10,000 kicks once, but I fear the man who has practiced one kick 10,000 times."</p>
-              <p class="quote-author">- Bruce Lee</p>
-          </div>
-        </div>
-        <div class="profile-picture">
-          <img src="https://i.postimg.cc/T3xWbVFL/20231225-172412.jpg" alt="Profile Picture">
-          
-        </div>
-
-        <div class="profile-cta">
-            <div class="stats">
-                <div class="stat-item">
-                    <span class="stat-number">10+</span>
-                    <span class="stat-label">Projects</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">2+</span>
-                    <span class="stat-label">Years Experience</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">100%</span>
-                    <span class="stat-label">Client Satisfaction</span>
-                </div>
-            </div>
-            <button class="download-cv" onclick="openModal()">
-                <i class="fas fa-download"></i> Download CV
-            </button>
-        </div>
-      </section>
-
-      <section class="about-section" id="about">
-        <div class="container mt-5">
-            <h2 class="section-title">ABOUT ME</h2>
-            <div class="row align-items-center">
-          <div class="col-md-4">
-                    <img src="https://i.postimg.cc/4yP2T9tm/aboupic.jpg" alt="Jakes" class="img-fluid about-image">
-                    <!---->
-          </div>
-          <div class="col-md-8">
+        <section id="about" class="section about-section">
+            <div class="container">
+                <div class="about-grid">
                     <div class="about-content">
-                            <p>👋 Hi! I'm Adongo, a passionate self-taught frontend developer with a knack for creating engaging web experiences.</p>
-                            
-                            <div class="key-points">
-                                <div class="point">
-                                    <i class="fas fa-code"></i>
-                                    <p><strong>Tech Stack:</strong> I work with HTML, CSS, JavaScript, and React to build responsive and user-friendly applications.</p>
-                                </div>
-                                
-                                <div class="point">
-                                    <i class="fas fa-lightbulb"></i>
-                                    <p><strong>Approach:</strong> I combine clean code with creative problem-solving to deliver solutions that make a real impact.</p>
-                                </div>
-                                
-                                <div class="point">
-                                    <i class="fas fa-rocket"></i>
-                                    <p><strong>Mission:</strong> Transforming ideas into practical, user-friendly applications that solve real-world problems.</p>
-                                </div>
-                            </div>
+                        <h2 class="section-title">About Me</h2>
+                        <p class="about-intro">
+                            I am a results-driven Frontend Developer dedicated to building digital products that
+                            look
+                            great and perform flawlessly. I'm passionate about changing the UI game and crafting the
+                            best experiences possible. I'm always open to collaborating with others to bring
+                            ambitious
+                            ideas to life. With a deep understanding of the React ecosystem, I help startups and
+                            businesses transform complex requirements into seamless user experiences.
+                        </p>
+                        <ul class="about-summary">
+                            <li><strong>Frontend Architecture:</strong> Building scalable, maintainable, and
+                                performant
+                                codebases.</li>
+                            <li><strong>UI/UX Focus:</strong> Crafting intuitive interfaces with a focus on
+                                accessibility and responsiveness.</li>
+                            <li><strong>Modern Tech Stack:</strong> Leveraging the power of React, TypeScript, and
+                                Tailwind CSS.</li>
+                            <li><strong>Problem Solver:</strong> Translating business goals into technical solutions
+                                effectively.</li>
+                        </ul>
 
-                            <p class="collaboration-note">Ready to collaborate on your next project? Let's connect and create amazing projects together!! 🚀</p>
+                        <button id="view-experience-btn" class="btn btn-secondary">View Experience</button>
+
                     </div>
-          </div>
-        </div>
-      </div>
-    </section>
-      
-    <section class="projects-section" id="projects">
-    <div class="container">
-        <h2 class="section-title">Projects</h2>
-        
-        <div class="category-buttons">
-            <button class="category-btn active" data-category="portfolio">Portfolio</button>
-            <button class="category-btn" data-category="saas">SaaS Projects</button>
-        </div>
-
-        <!-- Portfolio Projects -->
-        <div class="project-category active" id="portfolio">
-            <div class="projects-carousel">
-                <div class="carousel-container">
-                    <div class="projects-grid">
-                        <!-- Project 1 -->
-                        <div class="project-card">
-                            <div class="project-image-container">
-                                <img src="./png (1).png" alt="YouTube Receipt">
-                            </div>
-                            <div class="project-content">
-                                <h3>YouTube Receipt Generator</h3>
-                                <p>A creative web application that transforms your YouTube viewing history into stylish, shareable receipts. Features customizable themes, detailed watch statistics, and social sharing capabilities. Built with the YouTube Data API.</p>
-                                <div class="tech-stack">
-                                    <span>HTML & CSS</span>
-                                    <span>JavaScript</span>
-                                    <span>YouTube API</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="https://ytreceipt.vercel.app/" target="_blank">View Live</a>
-                                    <a href="https://github.com/Adong-o/ytreceipt" target="_blank">View Code</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Project 2 -->
-                        <div class="project-card">
-                            <div class="project-image-container">
-                                <img src="./png (6).png" alt="AI Saas Generator">
-                            </div>
-                            <div class="project-content">
-                                <div class="status-badge">In Development</div>
-                                <h3>Opinionark</h3>
-                                <p>The easiest way for entrepreneurs and indie hackers to collect, showcase, and leverage user feedback. Add our lightweight widget to your website in less than 2 minutes.</p>
-                                <div class="tech-stack">
-                                    <span>React</span>
-                                    <span>Vite</span>
-                                    <span>OpenAI API</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="https://opinionark.vercel.app" target="_blank">View Live</a>
-                                    <a href="https://github.com/Adong-o/saas-ideas-generator" target="_blank">View Code</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Project 3 -->
-                        <div class="project-card">
-                            <div class="project-image-container">
-                                <img src="./png (2).png" alt="Orgo Food App">
-                            </div>
-                            <div class="project-content">
-                                <h3>Ventourism</h3>
-                                <p>A modern tourism platform redesign for a Tanzanian travel company. Features immersive virtual tours, real-time booking integration, and local cultural experiences showcase. Implements responsive design and progressive web app capabilities.</p>
-                                <div class="tech-stack">
-                                    <span>Shadcn</span>
-                                    <span>Tailwind CSS</span>
-                                    <span>React</span>
-                                    <span>Typescript</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="https://venstourism-tz.vercel.app" target="_blank">View Live</a>
-                                    <a href="https://github.com/Adong-o/orgo-food-app" target="_blank">View Code</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Project 4 -->
-                        <div class="project-card">
-                            <div class="project-image-container">
-                                <img src="./png (3).png" alt="Portfolio Website">
-                            </div>
-                            <div class="project-content">
-                                <h3>Portfolio Website</h3>
-                                <p>A dynamic portfolio showcasing my development journey. Features include an interactive space theme in dark mode, keyboard command center, custom cursor animations, and seamless project categorization. Built with performance and accessibility in mind.</p>
-                                <div class="tech-stack">
-                                    <span>HTML5</span>
-                                    <span>CSS3</span>
-                                    <span>JavaScript</span>
-                                    <span>Bootstrap</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="https:adongo.soldsaas.com" target="_blank">View Live</a>
-                                    <a href="https://github.com/Adong-o/portfolio-website" target="_blank">View Code</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Project 5 -->
-                        <div class="project-card">
-                            <div class="project-image-container">
-                                <img src="./png (4).png" alt="RoamEstate">
-                            </div>
-                            <div class="project-content">
-                                <h3>RoamEstate</h3>
-                                <p>A comprehensive real estate platform offering virtual property tours, smart property matching, and integrated mortgage calculators. Features real-time market analytics and neighborhood insights for informed decision-making.</p>
-                                <div class="tech-stack">
-                                    <span>React</span>
-                                    <span>Tailwind css</span>
-                                    <span>Typescript</span>
-                                    <span>Supabase</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="https://roamestate.vercel.app" target="_blank">View Live</a>
-                                    <a href="https://github.com/Adong-o/weather-dashboard" target="_blank">View Code</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Project 6 -->
-                        <div class="project-card">
-                            <div class="project-image-container">
-                                <img src="./png (5).png" alt="Launchmetrics">
-                            </div>
-                            <div class="project-content">
-                                <div class="status-badge">In Development</div>
-                                <h3>Launchmetrics</h3>
-                                <p>An intuitive website analytics platform providing detailed visitor insights, user behavior tracking, and conversion optimization tools. Features include custom event tracking, heatmaps, and automated performance reports starting at $10/month.</p>
-                                <div class="tech-stack">
-                                    <span>React</span>
-                                    <span>Typescript</span>
-                                    <span>Tailwind css</span>
-                                    <span>Supabase</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="https://launchmetrics.vercel.app/" target="_blank">View Live</a>
-                                    <a href="https://github.com/Adong-o/chatbot-ai" target="_blank">View Code</a>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="skills-list">
+                        <h3>Tech Stack</h3>
+                        <ul>
+                            <li>HTML & CSS</li>
+                            <li>JavaScript (ES6+)</li>
+                            <li>React</li>
+                            <li>TypeScript</li>
+                            <li>Tailwind CSS</li>
+                            <li>PostgreSQL</li>
+                            <li>Figma</li>
+                            <li>Git/GitHub</li>
+                        </ul>
                     </div>
-                </div>
-                <button class="carousel-btn prev-btn">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <button class="carousel-btn next-btn">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-                <div class="carousel-dots"></div>
-            </div>
-        </div>
-
-        <!-- SaaS Projects -->
-        <div class="project-category" id="saas">
-            <div class="projects-carousel">
-                <div class="carousel-container">
-                    <div class="projects-grid">
-                        <div class="project-card">
-                            <div class="project-image-container">
-                                <img src="https://i.postimg.cc/D0StGzmb/png-9.jpg" alt="SoldSaas">
-                            </div>
-                            <div class="project-content">
-                                <div class="status-badge">In Development</div>
-                                <h3>SoldSaas</h3>
-                                <p>A specialized marketplace facilitating the buying and selling of SaaS businesses on X (Twitter). Features automated valuation tools, secure escrow integration, and due diligence automation. Built for the growing micro-SaaS community.</p>
-                                <div class="tech-stack">
-                                    <span>HTML & CSS</span>
-                                    <span>Firebase</span>
-                                    <span>JavaScript</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="https://soldsaas.vercel.app/" target="_blank">View Live</a>
-                                    <a href="https://github.com/Adong-o/soldsaas.git" target="_blank">View Code</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-btn prev-btn">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <button class="carousel-btn next-btn">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-                <div class="carousel-dots"></div>
-            </div>
-        </div>
-    </div>
-</section>
-      
-      <div class="center1">
-        <button class="button11"><a href="https://github.com/Adong-o?tab=repositories" target="_blank">More</a></button>
-    </div>
-
-    <section class="skills-section" id="skills">
-      <h2>Skills</h2>
-      <ul class="skills-list">
-          <!-- Frontend Core -->
-          <li>HTML5 & CSS3</li>
-          <li>JavaScript (ES6+)</li>
-          <li>React.js</li>
-          <li>Bootstrap</li>
-          <li>Responsive Design</li>
-          
-          <!-- UI/UX -->
-          <li>Figma</li>
-          <li>UI/UX Design</li>
-          <li>Wireframing</li>
-          
-          <!-- Development Tools -->
-          <li>Git & GitHub</li>
-          <li>VS Code</li>
-          <li>Chrome DevTools</li>
-          
-          <!-- Additional Frontend -->
-          <li>REST APIs</li>
-          <li>SASS/SCSS</li>
-          <li>Tailwind CSS</li>
-          
-          <!-- Soft Skills -->
-          <li>Problem Solving</li>
-          <li>Team Collaboration</li>
-          <li>Time Management</li>
-      </ul>
-  </section>
-
-      <section class="contact-section" id="contact">
-        <div class="container12">
-                <h1>Let's talk more</h1>
-        <form action="https://formspree.io/f/mbjnbawp" method="POST">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" rows="3" placeholder="Your Message" required></textarea>
-                    </div>
-          <button type="submit" class="butn">Submit</button>
-        </form>
-      </div>
-      </section>
-    </div>
-
-      <footer>
-        <div class="footer-container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <h3>Jakes Adongo</h3>
-                    <p>Frontend Developer</p>
-                </div>
-                <div class="footer-social">
-                    <a href="https://github.com/Adong-o" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://twitter.com/AdongoJakes" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="https://www.instagram.com/lord.adongo/" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="mailto:adongojakes@gmail.com"><i class="fas fa-envelope"></i></a>
-                </div>
-                <div class="footer-bottom">
-                    <p class="copyright">&copy; 2024 | Crafted with <i class="fas fa-code"></i> by Adongo</p>
                 </div>
             </div>
+        </section>
+
+        <section id="work" class="section work-section">
+            <div class="container">
+                <h2 class="section-title">Selected Work</h2>
+                <div class="projects-grid">
+                    <!-- Project 1: Opinionark -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="png (6).png" alt="Opinionark Dashboard" loading="lazy">
+                            <span class="status-tag building">Building</span>
+                        </div>
+                        <div class="project-info">
+                            <h3>Opinionark</h3>
+                            <p>A powerful SaaS feedback collection widget designed to help entrepreneurs gather
+                                actionable user insights. Features seamless integration, customizable surveys, and
+                                real-time analytics to drive product growth.</p>
+                            <div class="tags">
+                                <span>React</span>
+                                <span>TypeScript</span>
+                                <span>Tailwind</span>
+                                <span>Supabase</span>
+                            </div>
+                            <a href="https://opinionark.com" target="_blank" class="project-link">View Project
+                                &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: RoamEstate -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="png (4).png" alt="RoamEstate Platform" loading="lazy">
+                        </div>
+                        <div class="project-info">
+                            <h3>RoamEstate</h3>
+                            <p>A comprehensive real estate platform facilitating property sales, rentals, and
+                                short-term
+                                stays. Connects buyers, renters, and hosts with a seamless search experience and
+                                detailed property listings.</p>
+                            <div class="tags">
+                                <span>React</span>
+                                <span>TypeScript</span>
+                                <span>Tailwind</span>
+                                <span>Supabase</span>
+                            </div>
+                            <a href="https://roamestate.com" target="_blank" class="project-link">View Project
+                                &rarr;</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <h2 class="section-title">Let's Work Together</h2>
+                    <p class="contact-text">
+                        I'm currently available for freelance work and open to full-time opportunities.
+                        If you have a project that needs some creative touch, or just want to say hi, my inbox is always
+                        open.
+                    </p>
+                    <a href="mailto:adongoabc@proton.me" class="btn btn-primary contact-btn">Say Hello</a>
+
+                    <div class="social-links">
+                        <a href="https://github.com/Adong-o" target="_blank">GitHub</a>
+                        <a href="https://twitter.com/adongoabc" target="_blank">Twitter / X</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 Joe Adongo. All rights reserved.</p>
         </div>
     </footer>
-   
-     
 
-
-    <script src="main.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-
-    <div id="resumeModal" class="modal">
+    <div id="experience-modal" class="modal hidden">
         <div class="modal-content">
-            <span class="close-modal" onclick="closeModal()">&times;</span>
-            <h3>Resume Currently Unavailable</h3>
-            <p>I'm currently updating my resume to better reflect my recent projects and experiences. In the meantime, feel free to reach out to me directly on X (formerly Twitter) for any opportunities or collaborations!</p>
-            <a href="https://twitter.com/AdongoJakes" class="twitter-link" target="_blank">
-                <i class="fa-brands fa-x-twitter"></i> Reach Out on X
-            </a>
+            <span class="close-modal">&times;</span>
+            <h2 class="modal-title">Professional Experience</h2>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <h4>SoldSaaS</h4>
+                    <span class="exp-date">Current</span>
+                </div>
+                <p class="exp-role">Founder & Web Designer</p>
+                <ul class="exp-points">
+                    <li>Founded a web design agency to help businesses grow online.</li>
+                    <li>Designing professional websites that look good and work well on all devices.</li>
+                    <li>Helping clients get found on Google through SEO and website indexing.</li>
+                    <li>Creating digital assets that boost online visibility and attract more customers.</li>
+                    <li>Managing the whole process from the first design idea to launching the website.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <h4>AllPack Industries</h4>
+                    <span class="exp-date">Oct 2024 – Present</span>
+                </div>
+                <p class="exp-role">IT Intern - Nairobi, Kenya</p>
+                <ul class="exp-points">
+                    <li>Work with IT team to digitize company documents and maintain Alfresco document management
+                        database.</li>
+                    <li>Scan, organize, and upload critical business documents ensuring data integrity and
+                        accessibility.</li>
+                    <li>Provide technical support for document management system users across departments.</li>
+                    <li>Assist in maintaining IT infrastructure and troubleshooting system issues.</li>
+                    <li>Support digital transformation initiatives to improve document workflow efficiency.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <h4>Kenya Tea Development Agency (KTDA)</h4>
+                    <span class="exp-date">Feb 2025 – May 2025</span>
+                </div>
+                <p class="exp-role">Data Analyst Intern - Nairobi, Kenya</p>
+                <ul class="exp-points">
+                    <li>Collaborated with senior data analysts to build predictive models and analyze business data
+                        using SAP and SAP HANA.</li>
+                    <li>Developed interactive dashboards and reports to support management decision-making.</li>
+                    <li>Performed data extraction, transformation, and analysis on large datasets to identify business
+                        trends.</li>
+                    <li>Created data visualization tools to present complex analytical insights to stakeholders.</li>
+                    <li>Worked cross-functionally with business units to understand data requirements and deliver
+                        actionable insights.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <h4>Ketepa Tea</h4>
+                    <span class="exp-date">Sept 2024 – Nov 2024</span>
+                </div>
+                <p class="exp-role">IT Support Attachee - Nairobi, Kenya</p>
+                <ul class="exp-points">
+                    <li>Provided comprehensive IT support to staff, resolving hardware and software issues efficiently.
+                    </li>
+                    <li>Diagnosed and repaired computer systems, printers, scanners, and other office equipment.</li>
+                    <li>Installed, configured, and maintained software applications and operating systems.</li>
+                    <li>Managed network connectivity issues and assisted with system updates and maintenance.</li>
+                    <li>Documented technical procedures and maintained IT asset inventory.</li>
+                    <li>Trained employees on proper use of IT systems and troubleshooting basic technical issues.</li>
+                </ul>
+            </div>
         </div>
     </div>
 
-    <div class="space-station">
-        <div class="station-title">Command Center</div>
-        <ul class="command-list">
-            <li class="command-item">
-                <span class="command-key">CTRL + G</span>
-                <i class="fab fa-github station-icon"></i>
-                <span>GitHub</span>
-            </li>
-            <li class="command-item">
-                <span class="command-key">CTRL + X</span>
-                <i class="fab fa-twitter station-icon"></i>
-                <span>X (Twitter)</span>
-            </li>
-            <li class="command-item">
-                <span class="command-key">CTRL + I</span>
-                <i class="fab fa-instagram station-icon"></i>
-                <span>Instagram</span>
-            </li>
-            <li class="command-item">
-                <span class="command-key">CTRL + M</span>
-                <i class="fas fa-envelope station-icon"></i>
-                <span>Mail</span>
-            </li>
-            <li class="command-item">
-                <span class="command-key">CTRL + B</span>
-                <i class="fas fa-volume-up station-icon"></i>
-                <span>Toggle Sound</span>
-            </li>
-            <li class="command-item">
-                <span class="command-key">CTRL + Q</span>
-                <i class="fas fa-sun station-icon"></i>
-                <span>Light Mode</span>
-            </li>
-        </ul>
-    </div>
+    <script src="main.js"></script>
+</body>
 
-    <div class="space-audio-toggle">
-        <i class="fas fa-volume-mute"></i>
-    </div>
-
-    <audio id="spaceAmbience" loop>
-        <source src="https://assets.mixkit.co/active_storage/sfx/2434/2434.wav" type="audio/wav">
-    </audio>
-    <audio id="commandSound">
-        <source src="https://assets.mixkit.co/active_storage/sfx/209/209.wav" type="audio/wav">
-    </audio>
-  </body>
-  </html>
+</html>
