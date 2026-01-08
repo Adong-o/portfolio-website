@@ -8,7 +8,9 @@
     <meta name="description" content="Portfolio of Adongo, a Frontend Developer building modern web experiences.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -102,7 +104,57 @@
         <section id="work" class="section work-section">
             <div class="container">
                 <h2 class="section-title">Selected Work</h2>
-                <div class="projects-grid">
+
+                <!-- Destkop Interactive View -->
+                <div id="interactive-projects" class="interactive-area">
+                    <div class="center-instruction">
+                        <p>Drag the projects to explore</p>
+                    </div>
+
+                    <div id="project-center-info" class="project-center-info">
+                        <div class="info-content">
+                            <h3 id="info-title">Select a Project</h3>
+                            <p id="info-desc">Drag or click on a project card to view details.</p>
+                            <div id="info-tags" class="tags justify-center"></div>
+                            <a id="info-link" href="#" target="_blank" class="btn btn-primary hidden">View Project</a>
+                        </div>
+                    </div>
+
+                    <!-- Project Draggables -->
+                    <div class="draggable-item" data-id="1" style="font-size: 0;">
+                        <!-- font-size 0 to remove whitespace gaps if any -->
+                        <div class="card-visual">
+                            <img src="png (6).png" alt="Opinionark">
+                            <span class="status-tag building">Building</span>
+                        </div>
+                        <!-- Hidden data for JS to pick up -->
+                        <div class="project-data hidden">
+                            <span data-key="title">Opinionark</span>
+                            <span data-key="desc">A powerful SaaS feedback collection widget designed to help
+                                entrepreneurs gather actionable user insights. Features seamless integration,
+                                customizable surveys, and real-time analytics to drive product growth.</span>
+                            <span data-key="tags">["React", "TypeScript", "Tailwind", "Supabase"]</span>
+                            <span data-key="link">https://opinionark.com</span>
+                        </div>
+                    </div>
+
+                    <div class="draggable-item" data-id="2">
+                        <div class="card-visual">
+                            <img src="png (4).png" alt="RoamEstate">
+                        </div>
+                        <div class="project-data hidden">
+                            <span data-key="title">RoamEstate</span>
+                            <span data-key="desc">A comprehensive real estate platform facilitating property sales,
+                                rentals, and short-term stays. Connects buyers, renters, and hosts with a seamless
+                                search experience and detailed property listings.</span>
+                            <span data-key="tags">["React", "TypeScript", "Tailwind", "Supabase"]</span>
+                            <span data-key="link">https://roamestate.com</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile/Fallback Grid View -->
+                <div class="projects-grid mobile-only">
                     <!-- Project 1: Opinionark -->
                     <article class="project-card">
                         <div class="project-image">
