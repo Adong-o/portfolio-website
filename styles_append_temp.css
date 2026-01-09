@@ -1,0 +1,127 @@
+/* Interactive Projects Section */
+.interactive-area {
+    display: none;
+    /* Hidden by default on mobile */
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background-color: #f8f9fa;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 2rem;
+    border: 1px solid var(--border-color);
+}
+
+.center-instruction {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--text-light);
+    font-size: 0.9rem;
+    pointer-events: none;
+    z-index: 10;
+    opacity: 0.8;
+}
+
+/* Central Info Display - Glassmorphism */
+.project-center-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 16px;
+    text-align: center;
+    pointer-events: none;
+    /* Let clicks pass through if needed, but we might want buttons clickable */
+    z-index: 5;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+}
+
+/* Allow click on links inside the info card */
+.project-center-info * {
+    pointer-events: auto;
+}
+
+.info-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.info-content p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.info-content .btn {
+    margin-top: 1rem;
+    margin-left: 0;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Draggable Items */
+.draggable-item {
+    position: absolute;
+    width: 250px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    cursor: grab;
+    z-index: 10;
+    transition: transform 0.1s linear, box-shadow 0.2s ease;
+    user-select: none;
+    touch-action: none;
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+}
+
+.draggable-item:active {
+    cursor: grabbing;
+    transform: scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+    /* Bring to front */
+}
+
+.card-visual {
+    pointer-events: none;
+    /* Prevent image dragging interfering with div dragging */
+    width: 100%;
+    height: 160px;
+    position: relative;
+    background: #f0f0f0;
+}
+
+.card-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Desktop Styles */
+@media (min-width: 992px) {
+    .interactive-area {
+        display: block;
+    }
+
+    .mobile-only {
+        display: none !important;
+    }
+}
