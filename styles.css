@@ -440,6 +440,14 @@ img {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
+.skill-group {
+    margin-bottom: 2rem;
+}
+
+.skill-group:last-child {
+    margin-bottom: 0;
+}
+
 /* Experience Modal */
 .modal {
     position: fixed;
@@ -924,12 +932,12 @@ img {
 
     /* Stack Hero Buttons & Adjust Padding */
     .hero {
-        padding-top: calc(var(--header-height) + 2rem);
+        padding-top: calc(var(--header-height) + 6rem);
         padding-bottom: 4rem;
     }
 
     .hero-title {
-        font-size: clamp(2.5rem, 10vw, 3.5rem);
+        font-size: clamp(2.2rem, 8vw, 3rem);
         margin-bottom: 1.5rem;
     }
 
